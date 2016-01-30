@@ -100,6 +100,8 @@ public class EnemyController : MonoBehaviour {
     enemyHealth -= damage;
     if (enemyHealth <= 0) {
       Destroy(this.gameObject);
+    } else {
+      target = GameObject.FindGameObjectWithTag(Tags.PLAYER);
     }
   }
 }
