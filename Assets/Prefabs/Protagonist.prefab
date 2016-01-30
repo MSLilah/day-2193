@@ -154,7 +154,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSpeed: 3
+  health: 0
+  invincibilityWindow: 1
+  healthText: {fileID: 0}
   projectile: {fileID: 158972, guid: ebe0fd338144b40a3806a2c916c7be4e, type: 2}
+  playerDirection: {x: 0, y: 0}
 --- !u!124 &12426986
 Behaviour:
   m_ObjectHideFlags: 1
