@@ -35,11 +35,7 @@ public class Projectile : MonoBehaviour {
   }
 
   void Move() {
-    if (rb2D.position.y <= 20f) {
-      rb2D.velocity = new Vector2(xVel, yVel) * 2f;
-    } else {
-      Destroy(gameObject);
-    }
+    rb2D.velocity = new Vector2(xVel, yVel) * 2f;
   }
 
   void OnTriggerEnter2D(Collider2D coll) {
