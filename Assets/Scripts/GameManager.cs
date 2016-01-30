@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour {
   public GameObject wall;
   public GameObject floor;
   public GameObject robot;
+  public GameObject projectile;
 
   //TODO: Remove this element as it is here for debugging purposes. We will
   // have a nicer display later
@@ -70,6 +71,7 @@ public class GameManager : MonoBehaviour {
 
   void Awake() {
     boardManager = GetComponent<BoardManager>();
+    Instantiate(robot, new Vector3(2.0f, 4.0f, 0f), Quaternion.identity);
     StartGame();
   }
 

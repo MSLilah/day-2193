@@ -10,18 +10,18 @@ public class PlayerController : MonoBehaviour {
   private GameObject currentStation;
   private GameManager gameManager;
 
-	// Use this for initialization
-	void Start () {
-	  rb = GetComponent<Rigidbody2D>();
+  // Use this for initialization
+  void Start () {
+    rb = GetComponent<Rigidbody2D>();
     canRestore = false;
     gameManager = GameObject.FindGameObjectWithTag(Tags.GAME_CONTROLLER).GetComponent<GameManager>();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	  Move();
+  }
+
+  // Update is called once per frame
+  void Update () {
+    Move();
     RestoreResource();
-	}
+  }
 
   void OnTriggerEnter2D(Collider2D other) {
     if (other.gameObject.tag == Tags.RESTORATION_STATION) {
