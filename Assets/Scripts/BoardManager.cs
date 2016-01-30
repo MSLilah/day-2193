@@ -17,10 +17,10 @@ public class BoardManager : MonoBehaviour {
       for (int j = 0; j < rows; j++) {
         if (i == 0 || j == 0 || i == columns || j == rows) {
           instObj = wall;
-          Debug.Log("Wall: " + i + ", " + j);
+          //Debug.Log("Wall: " + i + ", " + j);
         } else {
           instObj = floor;
-          Debug.Log("Floor: " + i + ", " + j);
+          //Debug.Log("Floor: " + i + ", " + j);
         }
 
         GameObject instance = Instantiate(instObj,

@@ -7,7 +7,8 @@ public class GameManager : MonoBehaviour {
   private BoardManager boardManager;
   private int itemsTotal;
   private int oxygenTotal;
-  private int steering;
+  private int steeringTotal;
+  private float timeLeft;
 
   public GameObject wall;
   public GameObject floor;
@@ -27,9 +28,28 @@ public class GameManager : MonoBehaviour {
 
     courseOffset = 15f;
     courseRateOfIncrease = 0.5f;
+
+    timeLeft = 60f;
   }
 
   void GameOver() {
+  }
+
+  bool IsGameOver() {
+    // End conditions
+    //
+
+    if (timeLeft < 0f) {
+      return true;
+    } else if (oxygenTotal <= 0) {
+      return true;
+    } else if (itemsTotal <= 0) {
+      return true;
+    } else if (steeringTotal <= 0) {
+      return true;
+    } else {
+      return false;
+    }
   }
 
   void WinGame() {
@@ -42,7 +62,15 @@ public class GameManager : MonoBehaviour {
   }
 
   void Update() {
+    if (IsGameOver()) {
+      GameOver();
+    }
+
     courseOffset += courseRateOfIncrease * Time.deltaTime;
     courseOffsetDisplay.text = "Course Offset: " + Mathf.FloorToInt(courseOffset);
+
+    Debug.Log(timeLeft);
+
+    timeLeft -= Time.deltaTime;
   }
 }
