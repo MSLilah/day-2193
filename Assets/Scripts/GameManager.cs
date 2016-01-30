@@ -6,7 +6,6 @@ public class GameManager : MonoBehaviour {
 
   private BoardManager boardManager;
   private int itemsTotal;
-  private float oxygenTotal;
   private float timeLeft;
 
   public GameObject wall;
@@ -16,10 +15,15 @@ public class GameManager : MonoBehaviour {
   //TODO: Remove this element as it is here for debugging purposes. We will
   // have a nicer display later
   public Text courseOffsetDisplay;
+  public Text oxygenDisplay;
 
   private static float courseOffset;
   private float courseRateOfIncrease;
   private float courseRateOfRestoration;
+
+  private float currentOxygen;
+  private float oxygenRateOfDecrease;
+  private float oxygenRateOfRestoration;
 
   private const int MAX_COURSE_OFFSET = 100;
 
@@ -30,9 +34,12 @@ public class GameManager : MonoBehaviour {
     courseRateOfIncrease = 0.5f;
     courseRateOfRestoration = -1.0f;
 
+    currentOxygen = 100f;
+    oxygenRateOfDecrease = 1.0f;
+    oxygenRateOfRestoration = 2.0f;
+
     timeLeft = 60f;
     itemsTotal = 20;
-    oxygenTotal = 100f;
   }
 
   void GameOver() {
@@ -46,7 +53,7 @@ public class GameManager : MonoBehaviour {
 
     if (timeLeft < 0f) {
       return true;
-    } else if (oxygenTotal <= 0) {
+    } else if (currentOxygen <= 0) {
       return true;
     } else if (itemsTotal <= 0) {
       return true;
@@ -71,21 +78,29 @@ public class GameManager : MonoBehaviour {
       GameOver();
     }
 
-    courseOffset += courseRateOfIncrease * Time.deltaTime;
-    courseOffsetDisplay.text = "Course Offset: " + Mathf.FloorToInt(courseOffset);
-
     // Decrease resources
+    DecreaseResources();
+   
+  }
 
+  void DecreaseResources() {
+    courseOffset += courseRateOfIncrease * Time.deltaTime;
     //Debug.Log(timeLeft);
     timeLeft -= Time.deltaTime;
+    currentOxygen -= Time.deltaTime * oxygenRateOfDecrease;
 
-    oxygenTotal -= Time.deltaTime;
+    // TODO: Remove these
+    courseOffsetDisplay.text = "Course Offset: " + Mathf.FloorToInt(courseOffset);
+    oxygenDisplay.text = "Oxygen: " + Mathf.CeilToInt(currentOxygen);
   }
 
   public void RestoreResource(GameObject restoringStation) {
     switch (restoringStation.name) {
       case RestorationStations.CONSOLE:
         courseOffset += courseRateOfRestoration * Time.deltaTime;
+        break;
+      case RestorationStations.OXYGEN_STATION:
+        currentOxygen += oxygenRateOfRestoration * Time.deltaTime;
         break;
       default:
         // Do nothing, as this was errantly triggered
