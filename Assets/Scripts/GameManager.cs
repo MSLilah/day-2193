@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour {
 
   private BoardManager boardManager;
   private int itemsTotal;
-  private int oxygenTotal;
+  private float oxygenTotal;
   private float timeLeft;
 
   public GameObject wall;
@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour {
 
     timeLeft = 60f;
     itemsTotal = 20;
-    oxygenTotal = 100;
+    oxygenTotal = 100f;
   }
 
   void GameOver() {
@@ -79,7 +79,7 @@ public class GameManager : MonoBehaviour {
     //Debug.Log(timeLeft);
     timeLeft -= Time.deltaTime;
 
-    oxygenTotal -= 1;
+    oxygenTotal -= Time.deltaTime;
   }
 
   public void RestoreResource(GameObject restoringStation) {
