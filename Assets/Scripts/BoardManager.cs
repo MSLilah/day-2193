@@ -9,9 +9,9 @@ public class BoardManager : MonoBehaviour {
   private GameObject wall;
   private GameObject floor;
 
-  private enum Locations {Cockpit, Oxygen, Health, Items, Unknown};
+  public enum Locations {Cockpit, Oxygen, Health, Items, Unknown};
 
-  Locations DetermineLocation(Vector2 location) {
+  public static Locations DetermineLocation(Vector2 location) {
     if ((location.x >= 0 && location.x < 15) &&
         (location.y >= 0 && location.y < 15)) {
       return Locations.Cockpit;
