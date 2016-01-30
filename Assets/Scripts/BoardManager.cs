@@ -15,7 +15,7 @@ public class BoardManager : MonoBehaviour {
 
     for (int i = 0; i < columns; i++) {
       for (int j = 0; j < rows; j++) {
-        if (i == 0 || j == 0 || i == columns || j == rows) {
+        if (i == 0 || j == 0 || i == columns-1 || j == rows-1) {
           instObj = wall;
           //Debug.Log("Wall: " + i + ", " + j);
         } else {

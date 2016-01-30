@@ -154,6 +154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSpeed: 3
+  projectile: {fileID: 158972, guid: ebe0fd338144b40a3806a2c916c7be4e, type: 2}
 --- !u!124 &12426986
 Behaviour:
   m_ObjectHideFlags: 1
@@ -206,6 +207,10 @@ Prefab:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 158972, guid: ebe0fd338144b40a3806a2c916c7be4e, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 132356}
