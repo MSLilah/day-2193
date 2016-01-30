@@ -9,6 +9,26 @@ public class BoardManager : MonoBehaviour {
   private GameObject wall;
   private GameObject floor;
 
+  private enum Locations {Cockpit, Oxygen, Health, Items, Unknown};
+
+  Locations DetermineLocation(Vector2 location) {
+    if ((location.x >= 0 && location.x < 15) &&
+        (location.y >= 0 && location.y < 15)) {
+      return Locations.Cockpit;
+    } else if ((location.x >= -15 && location.x < 0) &&
+               (location.y >= 7 && location.y < 23)) {
+      return Locations.Items;
+    } else if ((location.x >= 15 && location.x < 30) &&
+               (location.y >= 7 && location.y < 23)) {
+      return Locations.Oxygen;
+    } else if ((location.x >= 0 && location.x < 15) &&
+               (location.y >= 15 && location.y < 30)) {
+      return Locations.Health;
+    } else {
+      return Locations.Unknown;
+    }
+  }
+
   void DrawBoard(int x, int y, List<Vector2> doors) {
     GameObject instObj;
 
