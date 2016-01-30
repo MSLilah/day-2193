@@ -4,18 +4,16 @@ using System.Collections;
 public class BoardManager : MonoBehaviour {
 
   private Transform boardTransform;
-  private int columns;
-  private int rows;
 
   private GameObject wall;
   private GameObject floor;
 
-  void DrawBoard() {
+  void DrawBoard(int columns, int rows, int x, int y) {
     GameObject instObj;
 
-    for (int i = 0; i < columns; i++) {
-      for (int j = 0; j < rows; j++) {
-        if (i == 0 || j == 0 || i == columns-1 || j == rows-1) {
+    for (int i = x; i < columns; i++) {
+      for (int j = y; j < rows; j++) {
+        if (i == x || j == y || i == columns-1 || j == rows-1) {
           instObj = wall;
           //Debug.Log("Wall: " + i + ", " + j);
         } else {
@@ -35,9 +33,12 @@ public class BoardManager : MonoBehaviour {
     wall = w;
     floor = f;
 
-    columns = 15;
-    rows = 15;
+    // Cockpit
+    DrawBoard(15, 15, 0, 0);
 
-    DrawBoard();
+    // Item Room
+    DrawBoard(15, 15, -15, 0);
+    // People/Oxygen Room
+    // Health Station
   }
 }
