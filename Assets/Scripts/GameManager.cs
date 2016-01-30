@@ -13,7 +13,6 @@ public class GameManager : MonoBehaviour {
   public GameObject robot;
 
   void StartGame() {
-    Debug.Log("Hello there");
     boardManager.GenerateBoard(wall, floor);
   }
 
