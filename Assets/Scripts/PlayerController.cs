@@ -4,14 +4,21 @@ using System.Collections;
 public class PlayerController : MonoBehaviour {
 
   public float playerSpeed;
+  public float health;
+  public float invincibilityWindow = 1.0f;
+
+  // TODO: Remove this
+  public UnityEngine.UI.Text healthText;
 
   public GameObject projectile;
   private float fireDelay = 0f;
 
   private Rigidbody2D rb;
-  private bool canRestore;
-  private GameObject currentStation;
   private GameManager gameManager;
+  private bool invincible;
+  private bool canInteract;
+
+  private GameObject collidingStation;
 
   public Vector2 playerDirection;
 
@@ -19,8 +26,11 @@ public class PlayerController : MonoBehaviour {
   void Start () {
     playerDirection = new Vector2(0f, 2f);
     rb = GetComponent<Rigidbody2D>();
-    canRestore = false;
     gameManager = GameObject.FindGameObjectWithTag(Tags.GAME_CONTROLLER).GetComponent<GameManager>();
+    health = 100f;
+    invincible = false;
+    canInteract = false;
+    healthText = GameObject.FindGameObjectWithTag("Respawn").GetComponent<UnityEngine.UI.Text>();
   }
 
   public Vector2 getPlayerDirection() {
@@ -57,18 +67,21 @@ public class PlayerController : MonoBehaviour {
     }
 
     Move();
-    RestoreResource();
+    InteractWithStation();
+
+    // TODO: Remove this, replace with a health bar or something
+    healthText.text = "Player health: " + Mathf.CeilToInt(health);
   }
 
   void OnTriggerEnter2D(Collider2D other) {
     if (other.gameObject.tag == Tags.RESTORATION_STATION) {
-      canRestore = true;
-      currentStation = other.gameObject;
+      collidingStation = other.gameObject;
+      canInteract = true;
     }
   }
 
   void OnTriggerExit2D(Collider2D other) {
-    canRestore = other.gameObject.tag == Tags.RESTORATION_STATION;
+    canInteract = other.gameObject.tag == Tags.RESTORATION_STATION;
   }
 
   void Move() {
@@ -83,10 +96,22 @@ public class PlayerController : MonoBehaviour {
     rb.velocity = new Vector2(xVel, yVel);
   }
 
-  void RestoreResource() {
-    if (canRestore && Input.GetKey(KeyCode.Space)) {
-      print("Restoring Resource");
-      gameManager.RestoreResource(currentStation);
+  void InteractWithStation() {
+    if (canInteract && Input.GetKey(KeyCode.Space)) {
+      gameManager.RestoreResource(collidingStation);
     }
+  }
+
+  public void Damage(float damage) {
+    if (!invincible) {
+      health -= damage;
+      invincible = true;
+      StartCoroutine("InvincibilityTimer");
+    }
+  }
+
+  IEnumerator InvincibilityTimer() {
+    yield return new WaitForSeconds(invincibilityWindow);
+    invincible = false;
   }
 }

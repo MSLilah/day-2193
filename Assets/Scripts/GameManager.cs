@@ -127,10 +127,10 @@ public class GameManager : MonoBehaviour {
         courseOffset += 4 * courseRateOfIncrease * Time.deltaTime;
         break;
       case RestorationStations.OXYGEN_STATION:
-        currentOxygen -= oxygenRateOfDecrease * Time.deltaTime;
+        currentOxygen -= 4 * oxygenRateOfDecrease * Time.deltaTime;
         break;
       case RestorationStations.ITEM_STATION:
-        currentItems -= itemsRateOfDecrease * Time.deltaTime;
+        currentItems -= 4 * itemsRateOfDecrease * Time.deltaTime;
         break;
       default:
         // Do nothing, as this was errantly triggered

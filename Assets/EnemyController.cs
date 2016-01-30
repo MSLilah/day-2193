@@ -4,19 +4,19 @@ using System.Collections;
 public class EnemyController : MonoBehaviour {
 
   public float enemySpeed = 1f;
+  public float enemyDamage = 5f;
 
-  private Transform target;
+  private GameObject target;
   private Rigidbody2D rb;
+  private bool attackingTarget;
 
   private GameManager gm;
-  private GameObject collidingWith;
-  private bool collidingWithObject;
 
 	// Use this for initialization
 	void Start () {
 	  rb = gameObject.GetComponent<Rigidbody2D>();
     gm = GameObject.FindGameObjectWithTag(Tags.GAME_CONTROLLER).GetComponent<GameManager>();
-    collidingWithObject = false;
+    attackingTarget = false;
 	}
 	
 	// Update is called once per frame
@@ -26,18 +26,28 @@ public class EnemyController : MonoBehaviour {
     }
 
     Move();
-    InteractWithTarget();
+
+    if (attackingTarget) {
+      AttackTarget();
+    }
 	}
 
   void OnTriggerEnter2D(Collider2D other) {
-    if (other.gameObject.tag == Tags.RESTORATION_STATION || other.gameObject.tag == Tags.PLAYER) {
-      collidingWithObject = true;
-      collidingWith = other.gameObject;
+    if (other.gameObject == target) {
+      attackingTarget = true;
+    }
+  }
+
+  void OnTriggerStay2D(Collider2D other) {
+    if (other.gameObject.tag == Tags.PLAYER && other.gameObject != target) {
+      other.gameObject.GetComponent<PlayerController>().Damage(enemyDamage);
     }
   }
 
   void OnTriggerExit2D(Collider2D other) {
-    collidingWithObject = false;
+    if (other.gameObject == target) {
+      attackingTarget = false;
+    }
   }
 
   bool HasTarget() {
@@ -47,7 +57,7 @@ public class EnemyController : MonoBehaviour {
   // Select a target for the Enemy to attack
   void SelectTarget() {
     // Head for the closest restoration station
-    Transform closestStation = null;
+    GameObject closestStation = null;
     float distanceToClosest = 5000f;
     GameObject[] stations = GameObject.FindGameObjectsWithTag(Tags.RESTORATION_STATION);
 
@@ -57,7 +67,7 @@ public class EnemyController : MonoBehaviour {
 
       if (distance < distanceToClosest) {
         distanceToClosest = distance;
-        closestStation = station;
+        closestStation = obj;
       }
     }
 
@@ -65,24 +75,23 @@ public class EnemyController : MonoBehaviour {
   }
 
   float DistanceToTarget() {
-    return Vector2.Distance(gameObject.transform.position, target.position);
+    return Vector2.Distance(gameObject.transform.position, target.transform.position);
   }
 
   void Move() {
-    Vector2 direction = (target.position - gameObject.transform.position).normalized;
+    Vector2 direction = (target.transform.position - gameObject.transform.position).normalized;
     if (DistanceToTarget() > 0.8f) {
       rb.velocity = direction * enemySpeed;
     } else {
       rb.velocity = Vector2.zero;
     }
-
   }
 
-  void InteractWithTarget() {
-    if (collidingWithObject) {
-      if (collidingWith.tag == Tags.RESTORATION_STATION) {
-        gm.DecreaseResource(collidingWith);
-      }
+  void AttackTarget() {
+    if (target.tag == Tags.RESTORATION_STATION) {
+      gm.DecreaseResource(target);
+    } else if (target.tag == Tags.PLAYER) {
+      target.GetComponent<PlayerController>().Damage(enemyDamage);
     }
   }
 }
