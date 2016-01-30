@@ -80,7 +80,6 @@ public class GameManager : MonoBehaviour {
 
     // Decrease resources
     DecreaseResources();
-   
   }
 
   void DecreaseResources() {
