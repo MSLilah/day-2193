@@ -63,12 +63,14 @@ public class EnemyController : MonoBehaviour {
     GameObject[] stations = GameObject.FindGameObjectsWithTag(Tags.RESTORATION_STATION);
 
     foreach (GameObject obj in stations) {
-      Transform station = obj.transform;
-      float distance = Vector2.Distance(gameObject.transform.position, station.position);
+      if (obj.name != RestorationStations.HEALTH_STATION) {
+        Transform station = obj.transform;
+        float distance = Vector2.Distance(gameObject.transform.position, station.position);
 
-      if (distance < distanceToClosest) {
-        distanceToClosest = distance;
-        closestStation = obj;
+        if (distance < distanceToClosest) {
+          distanceToClosest = distance;
+          closestStation = obj;
+        }
       }
     }
 
