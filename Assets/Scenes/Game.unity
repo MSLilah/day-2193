@@ -158,6 +158,10 @@ Prefab:
       propertyPath: wall
       value: 
       objectReference: {fileID: 134258, guid: 7bda2ca3dbdbc474da2c32a4a28f05a2, type: 2}
+    - target: {fileID: 11493284, guid: 0965537aea45441808d66028dc17c6f6, type: 2}
+      propertyPath: console
+      value: 
+      objectReference: {fileID: 114930, guid: 922296f9519614092adecbeb1dcba1f3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0965537aea45441808d66028dc17c6f6, type: 2}
   m_IsPrefabParent: 0

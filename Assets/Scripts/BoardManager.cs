@@ -29,6 +29,10 @@ public class BoardManager : MonoBehaviour {
     }
   }
 
+  public void PlaceObj(GameObject obj, Vector3 location) {
+    Instantiate(obj, location, Quaternion.identity);
+  }
+
   void DrawBoard(int x, int y, List<Vector2> doors) {
     GameObject instObj;
 

@@ -21,16 +21,20 @@ public class GameManager : MonoBehaviour {
   private static float courseOffset;
   private float courseRateOfIncrease;
   private float courseRateOfRestoration;
+  public GameObject console;
 
   private float currentOxygen;
   private float oxygenRateOfDecrease;
   private float oxygenRateOfRestoration;
+  public GameObject oxygenStation;
 
   private float currentItems;
   private float itemsRateOfDecrease;
   private float itemsRateOfRestoration;
+  public GameObject resourceStation;
 
   private float healthRateOfRestoration;
+  public GameObject healthStation;
 
   private float timeLeft;
 
@@ -40,11 +44,13 @@ public class GameManager : MonoBehaviour {
   private PlayerController pc;
 
   void StartGame() {
-    boardManager.GenerateBoard(wall, floor);
+    boardManager.PlaceObj(robot, new Vector3(2.0f, 4.0f, 0));
 
     courseOffset = 15f;
     courseRateOfIncrease = 0.5f;
     courseRateOfRestoration = -1.0f;
+
+    boardManager.PlaceObj(console, new Vector3(8.0f, 3.0f, 0));
 
     currentOxygen = 100f;
     oxygenRateOfDecrease = 1.0f;
@@ -60,6 +66,8 @@ public class GameManager : MonoBehaviour {
 
     player = GameObject.FindGameObjectWithTag(Tags.PLAYER);
     pc = player.GetComponent<PlayerController>();
+
+    boardManager.GenerateBoard(wall, floor);
   }
 
   void GameOver() {
@@ -91,7 +99,6 @@ public class GameManager : MonoBehaviour {
 
   void Awake() {
     boardManager = GetComponent<BoardManager>();
-    Instantiate(robot, new Vector3(2.0f, 4.0f, 0f), Quaternion.identity);
     StartGame();
   }
 
