@@ -30,9 +30,13 @@ public class GameManager : MonoBehaviour {
     courseRateOfIncrease = 0.5f;
 
     timeLeft = 60f;
+    itemsTotal = 20;
+    oxygenTotal = 100;
+    steeringTotal = 100;
   }
 
   void GameOver() {
+    Debug.Log("Game Over");
     //Application.LoadLevel("GameOver");
   }
 
@@ -70,6 +74,7 @@ public class GameManager : MonoBehaviour {
     courseOffset += courseRateOfIncrease * Time.deltaTime;
     courseOffsetDisplay.text = "Course Offset: " + Mathf.FloorToInt(courseOffset);
 
+    //Debug.Log(timeLeft);
     timeLeft -= Time.deltaTime;
   }
 }
