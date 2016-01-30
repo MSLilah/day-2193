@@ -4,7 +4,7 @@ using System.Collections;
 public class GameManager : MonoBehaviour {
 
   private BoardManager boardManager;
-  private int itemsToal;
+  private int itemsTotal;
   private int oxygenTotal;
   private int steering;
 
@@ -18,7 +18,9 @@ public class GameManager : MonoBehaviour {
   }
 
   void GameOver() {
-
+    if (oxygenTotal == 0 || steering == 0) {
+      
+    }
   }
 
   void WinGame() {

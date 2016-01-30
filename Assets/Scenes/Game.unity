@@ -210,6 +210,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fb2739d903fa4860b126b9a3ae9e541, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wall: {fileID: 0}
-  floor: {fileID: 0}
+  wall: {fileID: 114768, guid: 7bda2ca3dbdbc474da2c32a4a28f05a2, type: 2}
+  floor: {fileID: 140008, guid: 27938f636ebc543dea34b9e2f926633b, type: 2}
   robot: {fileID: 132356, guid: 49c16fd9a7f2e4104a3e8aee50734f87, type: 2}
