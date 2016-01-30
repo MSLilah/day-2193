@@ -13,16 +13,16 @@ public class EnemyController : MonoBehaviour {
 
   private GameManager gm;
 
-	// Use this for initialization
-	void Start () {
-	  rb = gameObject.GetComponent<Rigidbody2D>();
+  // Use this for initialization
+  void Start () {
+    rb = gameObject.GetComponent<Rigidbody2D>();
     gm = GameObject.FindGameObjectWithTag(Tags.GAME_CONTROLLER).GetComponent<GameManager>();
     attackingTarget = false;
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	  if (!HasTarget()) {
+  }
+
+  // Update is called once per frame
+  void Update () {
+    if (!HasTarget()) {
       SelectTarget();
     }
 
@@ -31,7 +31,7 @@ public class EnemyController : MonoBehaviour {
     if (attackingTarget) {
       AttackTarget();
     }
-	}
+  }
 
   void OnTriggerEnter2D(Collider2D other) {
     if (other.gameObject == target) {
