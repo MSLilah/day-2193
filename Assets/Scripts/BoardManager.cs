@@ -24,7 +24,6 @@ public class BoardManager : MonoBehaviour {
             new Vector3(i, j, 0f), Quaternion.identity) as GameObject;
         instance.transform.SetParent(boardTransform);
       }
-
     }
   }
 

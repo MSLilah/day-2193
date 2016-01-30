@@ -179,6 +179,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2035350627}
+  - 114: {fileID: 2035350628}
   m_Layer: 0
   m_Name: Board
   m_TagString: Untagged
@@ -198,3 +199,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!114 &2035350628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2035350626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fb2739d903fa4860b126b9a3ae9e541, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wall: {fileID: 0}
+  floor: {fileID: 0}
+  robot: {fileID: 132356, guid: 49c16fd9a7f2e4104a3e8aee50734f87, type: 2}
