@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class GameManager : MonoBehaviour {
@@ -63,7 +64,7 @@ public class GameManager : MonoBehaviour {
 
   void GameOver() {
     Debug.Log("Game Over");
-    //Application.LoadLevel("GameOver");
+    SceneManager.LoadScene(1);
   }
 
   bool IsGameOver() {
