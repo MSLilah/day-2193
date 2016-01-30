@@ -23,7 +23,6 @@ public class GameManager : MonoBehaviour {
   private const int MAX_COURSE_OFFSET = 100;
 
   void StartGame() {
-    Debug.Log("Hello there");
     boardManager.GenerateBoard(wall, floor);
 
     courseOffset = 15f;

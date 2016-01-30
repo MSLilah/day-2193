@@ -12,12 +12,15 @@ public class BoardManager : MonoBehaviour {
 
   void DrawBoard() {
     GameObject instObj;
+
     for (int i = 0; i < columns; i++) {
       for (int j = 0; j < rows; j++) {
-        if ((i > 0 && j > 0) || (i < columns && j < rows)) {
+        if (i == 0 || j == 0 || i == columns || j == rows) {
           instObj = wall;
+          Debug.Log("Wall: " + i + ", " + j);
         } else {
           instObj = floor;
+          Debug.Log("Floor: " + i + ", " + j);
         }
 
         GameObject instance = Instantiate(instObj,
@@ -31,6 +34,9 @@ public class BoardManager : MonoBehaviour {
     boardTransform = new GameObject("Board").transform;
     wall = w;
     floor = f;
+
+    columns = 15;
+    rows = 15;
 
     DrawBoard();
   }
