@@ -162,6 +162,18 @@ Prefab:
       propertyPath: console
       value: 
       objectReference: {fileID: 114930, guid: 922296f9519614092adecbeb1dcba1f3, type: 2}
+    - target: {fileID: 11493284, guid: 0965537aea45441808d66028dc17c6f6, type: 2}
+      propertyPath: oxygenStation
+      value: 
+      objectReference: {fileID: 186136, guid: b87cbfb8dccb440178bc932f62aa998c, type: 2}
+    - target: {fileID: 11493284, guid: 0965537aea45441808d66028dc17c6f6, type: 2}
+      propertyPath: resourceStation
+      value: 
+      objectReference: {fileID: 162494, guid: 2f457eec925c546749f2982e102e4e31, type: 2}
+    - target: {fileID: 11493284, guid: 0965537aea45441808d66028dc17c6f6, type: 2}
+      propertyPath: healthStation
+      value: 
+      objectReference: {fileID: 124824, guid: 9c226501501c8448f82a9c150812e10e, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0965537aea45441808d66028dc17c6f6, type: 2}
   m_IsPrefabParent: 0

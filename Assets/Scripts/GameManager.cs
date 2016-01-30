@@ -44,21 +44,25 @@ public class GameManager : MonoBehaviour {
   private PlayerController pc;
 
   void StartGame() {
-    boardManager.PlaceObj(robot, new Vector3(2.0f, 4.0f, 0));
+    boardManager.PlaceObj(robot, new Vector3(2.0f, 4.0f, 0f));
 
     courseOffset = 15f;
     courseRateOfIncrease = 0.5f;
     courseRateOfRestoration = -1.0f;
 
-    boardManager.PlaceObj(console, new Vector3(8.0f, 3.0f, 0));
+    boardManager.PlaceObj(console, new Vector3(8.0f, 3.0f, 0f));
 
     currentOxygen = 100f;
     oxygenRateOfDecrease = 1.0f;
     oxygenRateOfRestoration = 2.0f;
 
+    boardManager.PlaceObj(oxygenStation, new Vector3(23f, 17f, 0f));
+
     currentItems = 20f;
     itemsRateOfDecrease = 0.2f;
     itemsRateOfRestoration = 0.3f;
+
+    boardManager.PlaceObj(resourceStation, new Vector3(-12f, 13f, 0f));
 
     healthRateOfRestoration = 5.0f;
 
