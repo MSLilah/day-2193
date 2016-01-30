@@ -7,7 +7,6 @@ public class GameManager : MonoBehaviour {
   private BoardManager boardManager;
   private int itemsTotal;
   private int oxygenTotal;
-  private int steeringTotal;
   private float timeLeft;
 
   public GameObject wall;
@@ -18,8 +17,9 @@ public class GameManager : MonoBehaviour {
   // have a nicer display later
   public Text courseOffsetDisplay;
 
-  private float courseOffset;
+  private static float courseOffset;
   private float courseRateOfIncrease;
+  private float courseRateOfRestoration;
 
   private const int MAX_COURSE_OFFSET = 100;
 
@@ -28,11 +28,11 @@ public class GameManager : MonoBehaviour {
 
     courseOffset = 15f;
     courseRateOfIncrease = 0.5f;
+    courseRateOfRestoration = -1.0f;
 
     timeLeft = 60f;
     itemsTotal = 20;
     oxygenTotal = 100;
-    steeringTotal = 100;
   }
 
   void GameOver() {
@@ -50,7 +50,7 @@ public class GameManager : MonoBehaviour {
       return true;
     } else if (itemsTotal <= 0) {
       return true;
-    } else if (steeringTotal <= 0) {
+    } else if (courseOffset >= 100) {
       return true;
     } else {
       return false;
@@ -80,5 +80,16 @@ public class GameManager : MonoBehaviour {
     timeLeft -= Time.deltaTime;
 
     oxygenTotal -= 1;
+  }
+
+  public void RestoreResource(GameObject restoringStation) {
+    switch (restoringStation.name) {
+      case RestorationStations.CONSOLE:
+        courseOffset += courseRateOfRestoration * Time.deltaTime;
+        break;
+      default:
+        // Do nothing, as this was errantly triggered
+        break;
+    }
   }
 }
