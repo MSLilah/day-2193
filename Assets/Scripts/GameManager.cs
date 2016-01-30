@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class GameManager : MonoBehaviour {
@@ -12,8 +13,20 @@ public class GameManager : MonoBehaviour {
   public GameObject floor;
   public GameObject robot;
 
+  //TODO: Remove this element as it is here for debugging purposes. We will
+  // have a nicer display later
+  public Text courseOffsetDisplay;
+
+  private float courseOffset;
+  private float courseRateOfIncrease;
+
+  private const int MAX_COURSE_OFFSET = 100;
+
   void StartGame() {
     boardManager.GenerateBoard(wall, floor);
+
+    courseOffset = 15f;
+    courseRateOfIncrease = 0.5f;
   }
 
   void GameOver() {
@@ -26,5 +39,10 @@ public class GameManager : MonoBehaviour {
   void Awake() {
     boardManager = GetComponent<BoardManager>();
     StartGame();
+  }
+
+  void Update() {
+    courseOffset += courseRateOfIncrease * Time.deltaTime;
+    courseOffsetDisplay.text = "Course Offset: " + Mathf.FloorToInt(courseOffset);
   }
 }
