@@ -7,8 +7,8 @@ public class BoardManager : MonoBehaviour {
   private int columns;
   private int rows;
 
-  public GameObject wall;
-  public GameObject floor;
+  private GameObject wall;
+  private GameObject floor;
 
   void DrawBoard() {
     GameObject instObj;
@@ -28,6 +28,7 @@ public class BoardManager : MonoBehaviour {
   }
 
   public void GenerateBoard(GameObject w, GameObject f) {
+    boardTransform = new GameObject("Board").transform;
     wall = w;
     floor = f;
 

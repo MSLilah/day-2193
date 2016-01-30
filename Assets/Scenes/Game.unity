@@ -180,6 +180,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2035350627}
   - 114: {fileID: 2035350628}
+  - 114: {fileID: 2035350629}
   m_Layer: 0
   m_Name: Board
   m_TagString: Untagged
@@ -213,3 +214,14 @@ MonoBehaviour:
   wall: {fileID: 114768, guid: 7bda2ca3dbdbc474da2c32a4a28f05a2, type: 2}
   floor: {fileID: 140008, guid: 27938f636ebc543dea34b9e2f926633b, type: 2}
   robot: {fileID: 132356, guid: 49c16fd9a7f2e4104a3e8aee50734f87, type: 2}
+--- !u!114 &2035350629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2035350626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0213a3bc79824fd4869d5b5b8707007, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -18,16 +18,13 @@ public class GameManager : MonoBehaviour {
   }
 
   void GameOver() {
-    if (oxygenTotal == 0 || steering == 0) {
-      
-    }
   }
 
   void WinGame() {
 
   }
 
-  void Start() {
+  void Awake() {
     boardManager = GetComponent<BoardManager>();
     StartGame();
   }
