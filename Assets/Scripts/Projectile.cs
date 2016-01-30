@@ -14,6 +14,7 @@ public class Projectile : MonoBehaviour {
 
   private float xVel;
   private float yVel;
+  private static float bulletDamage = 5.0f;
 
   void Start() {
     boxCollider = GetComponent<BoxCollider2D>();
@@ -39,8 +40,12 @@ public class Projectile : MonoBehaviour {
   }
 
   void OnTriggerEnter2D(Collider2D coll) {
+    print("Collision!");
     if (coll.gameObject.tag == Tags.BORDER) {
       Destroy(gameObject);
+    } else if (coll.gameObject.tag == Tags.ENEMY) {
+      Destroy(gameObject);
+      coll.gameObject.GetComponent<EnemyController>().Damage(bulletDamage);
     }
   }
 }

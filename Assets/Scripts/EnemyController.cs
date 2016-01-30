@@ -5,6 +5,7 @@ public class EnemyController : MonoBehaviour {
 
   public float enemySpeed = 1f;
   public float enemyDamage = 5f;
+  public float enemyHealth = 15f;
 
   private GameObject target;
   private Rigidbody2D rb;
@@ -92,6 +93,13 @@ public class EnemyController : MonoBehaviour {
       gm.DecreaseResource(target);
     } else if (target.tag == Tags.PLAYER) {
       target.GetComponent<PlayerController>().Damage(enemyDamage);
+    }
+  }
+
+  public void Damage(float damage) {
+    enemyHealth -= damage;
+    if (enemyHealth <= 0) {
+      Destroy(this.gameObject);
     }
   }
 }
