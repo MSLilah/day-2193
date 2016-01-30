@@ -4,10 +4,6 @@ using System.Collections;
 
 public class GameManager : MonoBehaviour {
 
-  private BoardManager boardManager;
-  private int itemsTotal;
-  private float timeLeft;
-
   public GameObject wall;
   public GameObject floor;
   public GameObject robot;
@@ -17,6 +13,9 @@ public class GameManager : MonoBehaviour {
   // have a nicer display later
   public Text courseOffsetDisplay;
   public Text oxygenDisplay;
+  public Text itemDisplay;
+
+  private BoardManager boardManager;
 
   private static float courseOffset;
   private float courseRateOfIncrease;
@@ -25,6 +24,12 @@ public class GameManager : MonoBehaviour {
   private float currentOxygen;
   private float oxygenRateOfDecrease;
   private float oxygenRateOfRestoration;
+
+  private float currentItems;
+  private float itemsRateOfDecrease;
+  private float itemsRateOfRestoration;
+
+  private float timeLeft;
 
   private const int MAX_COURSE_OFFSET = 100;
 
@@ -39,8 +44,11 @@ public class GameManager : MonoBehaviour {
     oxygenRateOfDecrease = 1.0f;
     oxygenRateOfRestoration = 2.0f;
 
+    currentItems = 20f;
+    itemsRateOfDecrease = 0.2f;
+    itemsRateOfRestoration = 0.3f;
+
     timeLeft = 60f;
-    itemsTotal = 20;
   }
 
   void GameOver() {
@@ -56,7 +64,7 @@ public class GameManager : MonoBehaviour {
       return true;
     } else if (currentOxygen <= 0) {
       return true;
-    } else if (itemsTotal <= 0) {
+    } else if (currentItems <= 0) {
       return true;
     } else if (courseOffset >= 100) {
       return true;
@@ -86,13 +94,14 @@ public class GameManager : MonoBehaviour {
 
   void DecreaseResources() {
     courseOffset += courseRateOfIncrease * Time.deltaTime;
-    //Debug.Log(timeLeft);
-    timeLeft -= Time.deltaTime;
     currentOxygen -= Time.deltaTime * oxygenRateOfDecrease;
+    currentItems -= Time.deltaTime * itemsRateOfDecrease;
+    timeLeft -= Time.deltaTime;
 
-    // TODO: Remove these
+    // TODO: Remove these in favor of a more interesting interface
     courseOffsetDisplay.text = "Course Offset: " + Mathf.FloorToInt(courseOffset);
     oxygenDisplay.text = "Oxygen: " + Mathf.CeilToInt(currentOxygen);
+    itemDisplay.text = "Items: " + Mathf.CeilToInt(currentItems);
   }
 
   public void RestoreResource(GameObject restoringStation) {
@@ -102,6 +111,9 @@ public class GameManager : MonoBehaviour {
         break;
       case RestorationStations.OXYGEN_STATION:
         currentOxygen += oxygenRateOfRestoration * Time.deltaTime;
+        break;
+      case RestorationStations.ITEM_STATION:
+        currentItems += itemsRateOfRestoration * Time.deltaTime;
         break;
       default:
         // Do nothing, as this was errantly triggered
