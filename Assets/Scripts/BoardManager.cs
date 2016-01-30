@@ -8,12 +8,15 @@ public class BoardManager : MonoBehaviour {
   private GameObject wall;
   private GameObject floor;
 
-  void DrawBoard(int columns, int rows, int x, int y) {
+  void DrawBoard(int x, int y) {
     GameObject instObj;
 
-    for (int i = x; i < columns; i++) {
-      for (int j = y; j < rows; j++) {
-        if (i == x || j == y || i == columns-1 || j == rows-1) {
+    int columns = 15;
+    int rows = 15;
+
+    for (int i = 0; i < columns; i++) {
+      for (int j = 0; j < rows; j++) {
+        if (i == 0 || j == 0 || i == columns-1 || j == rows-1) {
           instObj = wall;
           //Debug.Log("Wall: " + i + ", " + j);
         } else {
@@ -22,7 +25,7 @@ public class BoardManager : MonoBehaviour {
         }
 
         GameObject instance = Instantiate(instObj,
-            new Vector3(i, j, 0f), Quaternion.identity) as GameObject;
+            new Vector3((i+x), (j+y), 0f), Quaternion.identity) as GameObject;
         instance.transform.SetParent(boardTransform);
       }
     }
@@ -34,11 +37,12 @@ public class BoardManager : MonoBehaviour {
     floor = f;
 
     // Cockpit
-    DrawBoard(15, 15, 0, 0);
-
+    DrawBoard(0, 0);
     // Item Room
-    DrawBoard(15, 15, -15, 0);
+    DrawBoard(-15, 7);
     // People/Oxygen Room
+    DrawBoard(15, 7);
     // Health Station
+    DrawBoard(0, 15);
   }
 }
