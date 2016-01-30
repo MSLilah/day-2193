@@ -74,8 +74,12 @@ public class GameManager : MonoBehaviour {
     courseOffset += courseRateOfIncrease * Time.deltaTime;
     courseOffsetDisplay.text = "Course Offset: " + Mathf.FloorToInt(courseOffset);
 
+    // Decrease resources
+
     //Debug.Log(timeLeft);
     timeLeft -= Time.deltaTime;
+
+    oxygenTotal -= 1;
   }
 
   public void RestoreResource(GameObject restoringStation) {
