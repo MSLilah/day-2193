@@ -7,7 +7,7 @@ TagManager:
   - Console
   - RestorationStation
   - Projectile
-  - Border
+  - Enemy
   layers:
   - Default
   - TransparentFX
