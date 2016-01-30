@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour {
 
   }
 
-  void Awake() {
+  void Start() {
     boardManager = GetComponent<BoardManager>();
     StartGame();
   }
