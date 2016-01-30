@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour {
   }
 
   void GameOver() {
+    //Application.LoadLevel("GameOver");
   }
 
   bool IsGameOver() {
@@ -68,8 +69,6 @@ public class GameManager : MonoBehaviour {
 
     courseOffset += courseRateOfIncrease * Time.deltaTime;
     courseOffsetDisplay.text = "Course Offset: " + Mathf.FloorToInt(courseOffset);
-
-    Debug.Log(timeLeft);
 
     timeLeft -= Time.deltaTime;
   }
