@@ -29,9 +29,14 @@ public class GameManager : MonoBehaviour {
   private float itemsRateOfDecrease;
   private float itemsRateOfRestoration;
 
+  private float healthRateOfRestoration;
+
   private float timeLeft;
 
   private const int MAX_COURSE_OFFSET = 100;
+
+  private GameObject player;
+  private PlayerController pc;
 
   void StartGame() {
     boardManager.GenerateBoard(wall, floor);
@@ -48,7 +53,12 @@ public class GameManager : MonoBehaviour {
     itemsRateOfDecrease = 0.2f;
     itemsRateOfRestoration = 0.3f;
 
+    healthRateOfRestoration = 5.0f;
+
     timeLeft = 60f;
+
+    player = GameObject.FindGameObjectWithTag(Tags.PLAYER);
+    pc = player.GetComponent<PlayerController>();
   }
 
   void GameOver() {
@@ -59,8 +69,9 @@ public class GameManager : MonoBehaviour {
   bool IsGameOver() {
     // End conditions
     //
-
-    if (timeLeft < 0f) {
+    if (!pc.IsAlive()) {
+      return true;
+    } else if (timeLeft < 0f) {
       return true;
     } else if (currentOxygen <= 0) {
       return true;
@@ -114,6 +125,9 @@ public class GameManager : MonoBehaviour {
         break;
       case RestorationStations.ITEM_STATION:
         currentItems += itemsRateOfRestoration * Time.deltaTime;
+        break;
+      case RestorationStations.HEALTH_STATION:
+        pc.RestoreHealth(healthRateOfRestoration * Time.deltaTime);
         break;
       default:
         // Do nothing, as this was errantly triggered

@@ -5,6 +5,7 @@ public class PlayerController : MonoBehaviour {
 
   public float playerSpeed;
   public float health;
+  public float maxHealth;
   public float invincibilityWindow = 1.0f;
 
   // TODO: Remove this
@@ -27,7 +28,8 @@ public class PlayerController : MonoBehaviour {
     playerDirection = new Vector2(0f, 2f);
     rb = GetComponent<Rigidbody2D>();
     gameManager = GameObject.FindGameObjectWithTag(Tags.GAME_CONTROLLER).GetComponent<GameManager>();
-    health = 100f;
+    maxHealth = 100f;
+    health = maxHealth;
     invincible = false;
     canInteract = false;
     healthText = GameObject.FindGameObjectWithTag("Respawn").GetComponent<UnityEngine.UI.Text>();
@@ -113,5 +115,13 @@ public class PlayerController : MonoBehaviour {
   IEnumerator InvincibilityTimer() {
     yield return new WaitForSeconds(invincibilityWindow);
     invincible = false;
+  }
+
+  public bool IsAlive() {
+    return health > 0;
+  }
+
+  public void RestoreHealth(float toRestore) {
+    health = Mathf.Min(health + toRestore, maxHealth);
   }
 }
