@@ -89,10 +89,10 @@ public class GameManager : MonoBehaviour {
     }
 
     // Decrease resources
-    DecreaseResources();
+    PeriodicDecreaseResources();
   }
 
-  void DecreaseResources() {
+  void PeriodicDecreaseResources() {
     courseOffset += courseRateOfIncrease * Time.deltaTime;
     currentOxygen -= Time.deltaTime * oxygenRateOfDecrease;
     currentItems -= Time.deltaTime * itemsRateOfDecrease;
@@ -114,6 +114,23 @@ public class GameManager : MonoBehaviour {
         break;
       case RestorationStations.ITEM_STATION:
         currentItems += itemsRateOfRestoration * Time.deltaTime;
+        break;
+      default:
+        // Do nothing, as this was errantly triggered
+        break;
+    }
+  }
+
+  public void DecreaseResource(GameObject restoringStation) {
+    switch (restoringStation.name) {
+      case RestorationStations.CONSOLE:
+        courseOffset += 4 * courseRateOfIncrease * Time.deltaTime;
+        break;
+      case RestorationStations.OXYGEN_STATION:
+        currentOxygen -= oxygenRateOfDecrease * Time.deltaTime;
+        break;
+      case RestorationStations.ITEM_STATION:
+        currentItems -= itemsRateOfDecrease * Time.deltaTime;
         break;
       default:
         // Do nothing, as this was errantly triggered
