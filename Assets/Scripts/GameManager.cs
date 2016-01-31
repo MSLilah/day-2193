@@ -29,6 +29,8 @@ public class GameManager : MonoBehaviour {
   private GameObject player;
   private PlayerController pc;
 
+  public AudioSource ambientNoise;
+
   void StartGame() {
     boardManager.PlaceObj(robot, new Vector3(2.0f, 4.0f, 0f));
 
