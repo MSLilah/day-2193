@@ -47,13 +47,24 @@ public class PlayerController : MonoBehaviour {
   }
 
   public Vector2 getPlayerDirection() {
+    if (rb.velocity.magnitude != 0) {
     return this.playerDirection;
+    } else if (sr.flipX) {
+      return new Vector2(playerSpeed, 0.0f);
+    } else {
+      return new Vector2(-playerSpeed, 0.0f);
+    }
   }
 
   void Attack() {
     Vector3 playerPosition = transform.position;
-
-    if (playerDirection.x == 0 && playerDirection.y > 0) {
+    if (rb.velocity.magnitude == 0) {
+      if (sr.flipX) {
+        playerPosition.x += 1.0f;
+      } else {
+        playerPosition.x -= 1.0f;
+      }
+    } else if (playerDirection.x == 0 && playerDirection.y > 0) {
       playerPosition.y += 1.0f;
     } else if (playerDirection.x == 0 && playerDirection.y < 0) {
       playerPosition.y -= 1.0f;
