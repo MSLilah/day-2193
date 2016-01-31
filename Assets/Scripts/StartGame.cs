@@ -22,7 +22,6 @@ public class StartGame : MonoBehaviour {
   }
 
   public void AllowStart() {
-    print("Allowing start");
     canPlay = true;
   }
 }
