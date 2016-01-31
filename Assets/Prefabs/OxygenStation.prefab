@@ -11,6 +11,7 @@ GameObject:
   - 212: {fileID: 21274638}
   - 61: {fileID: 6179270}
   - 61: {fileID: 6114196}
+  - 114: {fileID: 11402458}
   m_Layer: 0
   m_Name: OxygenStation
   m_TagString: RestorationStation
@@ -58,6 +59,23 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
+--- !u!114 &11402458
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 186136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42b8b3996770c41f1ad28d59607cb270, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: OxygenStation
+  resourceName: Oxygen
+  resourceReductionRate: 1
+  resourceRestorationRate: 2
+  resourceTotal: 85
+  resourceText: {fileID: 11471204, guid: f055a8ae9f165489183e9e7d81c0a26a, type: 2}
 --- !u!212 &21274638
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -94,7 +112,32 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: name
+      value: OxygenStation
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: resourceName
+      value: Oxygen
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: resourceReductionRate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: resourceRestorationRate
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: resourceTotal
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: resourceText
+      value: 
+      objectReference: {fileID: 11471204, guid: f055a8ae9f165489183e9e7d81c0a26a,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 186136}
