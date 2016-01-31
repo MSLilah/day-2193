@@ -37,7 +37,7 @@ public class RestorationStationController : MonoBehaviour {
     initDamageCooldown = damageCooldown;
     initRestoreCooldown = restoreCooldown;
 
-    if (name == RestorationStations.OXYGEN_STATION) {
+    if (name == RestorationStations.CONSOLE || name == RestorationStations.OXYGEN_STATION) {
       barSR = bar.GetComponent<SpriteRenderer>();
 
       barSR.sprite = barSprites[10];
@@ -61,14 +61,13 @@ public class RestorationStationController : MonoBehaviour {
     if (damageCooldown <= initDamageCooldown) {
       damageCooldown += Time.deltaTime;
     }
-
-    if (name == RestorationStations.OXYGEN_STATION || name == RestorationStations.RESOURCE_STATION) {
+    if (name != RestorationStations.HEALTH_STATION) {
       DrawBar();
     }
   }
 
   void DrawBar() {
-    if (name == RestorationStations.OXYGEN_STATION) {
+    if (name == RestorationStations.OXYGEN_STATION || name == RestorationStations.CONSOLE) {
       int barPercent = Mathf.FloorToInt(resourceTotal) / 10;
 
       barSR.sprite = barSprites[barPercent];
@@ -76,7 +75,6 @@ public class RestorationStationController : MonoBehaviour {
       float barPercent = ((resourceTotal / 20)*10)-1;
       barSR.sprite = barSprites[(int)barPercent];
     }
-
   }
 
   public void DecreaseResourceTotal(float reduction) {
