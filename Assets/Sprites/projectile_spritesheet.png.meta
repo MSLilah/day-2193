@@ -1,0 +1,345 @@
+fileFormatVersion: 2
+guid: 23232cd812d19452c8ed93784709d068
+timeCreated: 1454212636
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: projectile_spritesheet_0
+    21300002: projectile_spritesheet_1
+    21300004: projectile_spritesheet_2
+    21300006: projectile_spritesheet_3
+    21300008: projectile_spritesheet_4
+    21300010: projectile_spritesheet_5
+    21300012: projectile_spritesheet_6
+    21300014: projectile_spritesheet_7
+    21300016: projectile_spritesheet_8
+    21300018: projectile_spritesheet_9
+    21300020: projectile_spritesheet_10
+    21300022: projectile_spritesheet_11
+    21300024: projectile_spritesheet_12
+    21300026: projectile_spritesheet_13
+    21300028: projectile_spritesheet_14
+    21300030: projectile_spritesheet_15
+    21300032: projectile_spritesheet_16
+    21300034: projectile_spritesheet_17
+    21300036: projectile_spritesheet_18
+    21300038: projectile_spritesheet_19
+    21300040: projectile_spritesheet_20
+    21300042: projectile_spritesheet_21
+    21300044: projectile_spritesheet_22
+    21300046: projectile_spritesheet_23
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 64
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: projectile_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 3
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: projectile_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 3
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: projectile_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 3
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: projectile_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 3
+        width: 21
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: projectile_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 3
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: projectile_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 3
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: projectile_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 3
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: projectile_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 3
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: projectile_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 3
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: projectile_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 3
+        width: 21
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: projectile_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 3
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: projectile_spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 3
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: projectile_spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 3
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: projectile_spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 2
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: projectile_spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 2
+        width: 18
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: projectile_spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 1
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: projectile_spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 2
+        width: 18
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: projectile_spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 2
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: projectile_spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 3
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: projectile_spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 2
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: projectile_spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 2
+        width: 18
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: projectile_spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 1
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: projectile_spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 2
+        width: 18
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: projectile_spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 2
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

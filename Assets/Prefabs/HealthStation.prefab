@@ -74,7 +74,7 @@ MonoBehaviour:
   resourceName: Ignore
   resourceReductionRate: 0
   resourceRestorationRate: 0
-  resourceTotal: 0
+  resourceTotal: 50
 --- !u!212 &21244016
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -119,6 +119,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: resourceName
       value: Ignore
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: resourceTotal
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

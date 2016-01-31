@@ -29,16 +29,13 @@ public class GameManager : MonoBehaviour {
   private GameObject player;
   private PlayerController pc;
 
-  public AudioSource ambientNoise;
-
   void StartGame() {
     boardManager.PlaceObj(robot, new Vector3(2.0f, 4.0f, 0f));
 
     boardManager.PlaceObj(console, new Vector3(8.0f, 3.0f, 0f));
-
     boardManager.PlaceObj(oxygenStation, new Vector3(23f, 17f, 0f));
-
     boardManager.PlaceObj(resourceStation, new Vector3(-12f, 13f, 0f));
+    boardManager.PlaceObj(healthStation, new Vector3(8.0f, 25f, 0f));
 
     timeLeft = 60f;
 
