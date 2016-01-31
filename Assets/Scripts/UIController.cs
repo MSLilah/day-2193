@@ -26,9 +26,9 @@ public class UIController : MonoBehaviour {
 
     healthDisplay.text = "Health: " + Mathf.CeilToInt(pc.health);
 
-    timeDisplay.text = "Time: " + gm.timeLeft.ToString("F2");
+    timeDisplay.text = "Time to Survive: " + gm.timeLeft.ToString("F2");
     if (gm.timeLeft < 30f) {
-      timeDisplay.color = Color.red;
+      timeDisplay.color = Color.green;
     } else {
       timeDisplay.color = Color.grey;
     }
