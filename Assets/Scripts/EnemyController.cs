@@ -125,7 +125,7 @@ public class EnemyController : MonoBehaviour {
 
       if (roarCooldown >= 3f) {
         int randomAttackSound = Random.Range(0,100);
-        if (randomAttackSound % 5 == 0) {
+        if (randomAttackSound % 2 == 0) {
           int randomSound = Random.Range(0, 4);
           if (randomSound == 0) {
             audio.PlayOneShot(roar1, 1.0F);

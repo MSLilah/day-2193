@@ -18,12 +18,19 @@ public class UIController : MonoBehaviour {
   }
 
   void Update() {
+    if (pc.health < 40f) {
+      healthDisplay.color = Color.red;
+    } else {
+      healthDisplay.color = Color.grey;
+    }
+
     healthDisplay.text = "Health: " + Mathf.CeilToInt(pc.health);
 
+    timeDisplay.text = "Time: " + gm.timeLeft.ToString("F2");
     if (gm.timeLeft < 30f) {
-      timeDisplay.text = "Time: " + gm.timeLeft.ToString("F2");
       timeDisplay.color = Color.red;
     } else {
+      timeDisplay.color = Color.grey;
       timeDisplay.text = "Time: " + gm.timeLeft.ToString("F2");
     }
 
@@ -35,6 +42,8 @@ public class UIController : MonoBehaviour {
 
         if (rsc.resourceTotal < 5) {
           uiDisplays[i].color = Color.red;
+        } else {
+          uiDisplays[i].color = Color.grey;
         }
 
         i++;
