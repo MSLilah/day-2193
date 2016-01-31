@@ -275,33 +275,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f055a8ae9f165489183e9e7d81c0a26a, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &1247408645 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11450462, guid: f055a8ae9f165489183e9e7d81c0a26a,
-    type: 2}
-  m_PrefabInternal: {fileID: 886754790}
-  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
---- !u!1 &1453937044 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 101844, guid: f055a8ae9f165489183e9e7d81c0a26a, type: 2}
-  m_PrefabInternal: {fileID: 886754790}
---- !u!114 &1453937049
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1453937044}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a27b434ccd37a48c1847cfae0c54f379, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uiDisplays:
-  - {fileID: 1705657195}
-  - {fileID: 760616769}
-  - {fileID: 2040468006}
-  healthDisplay: {fileID: 1247408645}
-  timeDisplay: {fileID: 0}
 --- !u!114 &1705657195 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11468470, guid: f055a8ae9f165489183e9e7d81c0a26a,
