@@ -43,7 +43,6 @@ public class GameManager : MonoBehaviour {
     player = GameObject.FindGameObjectWithTag(Tags.PLAYER);
     pc = player.GetComponent<PlayerController>();
 
-
     boardManager.GenerateBoard(wall, floor);
 
     enemySpawnCooldown = 0f;
