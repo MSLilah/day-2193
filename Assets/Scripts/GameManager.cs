@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour {
   public GameObject resourceStation;
   public GameObject healthStation;
 
-  private float timeLeft;
+  public float timeLeft;
 
   private const int MAX_COURSE_OFFSET = 100;
 
@@ -108,15 +108,15 @@ public class GameManager : MonoBehaviour {
         Debug.Log("Oxygen");
         minX = 15;
         maxX = 29;
-        minY = 7;
-        maxY = 22;
+        minY = 9;
+        maxY = 20;
         break;
       case BoardManager.Locations.Items:
         Debug.Log("Items");
         minX = -15;
         maxX = -1;
-        minY = 7;
-        maxY = 22;
+        minY = 9;
+        maxY = 20;
         break;
       case BoardManager.Locations.Health:
         Debug.Log("Health");
