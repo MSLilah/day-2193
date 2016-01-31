@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour {
   }
 
   void WinGame() {
-
+    SceneManager.LoadScene(Scenes.GAME_WIN);
   }
 
   void Awake() {
