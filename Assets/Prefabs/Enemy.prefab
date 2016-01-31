@@ -14,6 +14,7 @@ GameObject:
   - 114: {fileID: 11454490}
   - 61: {fileID: 6120864}
   - 82: {fileID: 8240836}
+  - 95: {fileID: 9527438}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -28,7 +29,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 174370}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.4393839, y: 1.4597838, z: 0}
+  m_LocalPosition: {x: 1.2903986, y: 1.9288449, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -152,6 +153,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!95 &9527438
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 174370}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fc95b6e4f50b5452584af1fa85102c13, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11454490
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -163,8 +181,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40166b3486ec34047aed502d229ff89a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySpeed: 1
-  enemyDamage: 5
+  enemySpeed: 2
+  enemyDamage: 10
   enemyHealth: 15
   death1: {fileID: 8300000, guid: 8e25fc9b793c34fcba04379f687cb880, type: 3}
   death2: {fileID: 8300000, guid: e37fa1c3602b743b1ae77ae857d63284, type: 3}
@@ -199,7 +217,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 31450505e86be49c694cb7b6ab930859, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c5a9032ac87f74b8c86350039b64e97e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -217,6 +235,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: enemySpeed
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
