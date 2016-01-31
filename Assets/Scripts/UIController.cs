@@ -31,7 +31,6 @@ public class UIController : MonoBehaviour {
       timeDisplay.color = Color.red;
     } else {
       timeDisplay.color = Color.grey;
-      timeDisplay.text = "Time: " + gm.timeLeft.ToString("F2");
     }
 
     int i = 0;

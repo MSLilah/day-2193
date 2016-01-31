@@ -76,7 +76,7 @@ public class GameManager : MonoBehaviour {
     if (timeLeft <= 80f) {
       if (Mathf.FloorToInt(timeLeft) % 8 == 0 && enemySpawnCooldown < 0) {
         SpawnEnemies(Random.Range(1, 3), (BoardManager.Locations)Random.Range(0,3));
-        enemySpawnCooldown = 5f;
+        enemySpawnCooldown = 8f;
       }
     }
   }
