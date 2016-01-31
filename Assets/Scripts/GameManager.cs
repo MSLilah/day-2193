@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour {
   void StartGame() {
     boardManager.PlaceObj(robot, new Vector3(2.0f, 17.0f, 0f));
 
-    boardManager.PlaceObj(console, new Vector3(8.0f, 3.0f, 0f));
+    boardManager.PlaceObj(console, new Vector3(7.0f, 3.0f, 0f));
     boardManager.PlaceObj(resourceStation, new Vector3(-12f, 13f, 0f));
     boardManager.PlaceObj(healthStation, new Vector3(7.0f, 22f, 0f));
 
