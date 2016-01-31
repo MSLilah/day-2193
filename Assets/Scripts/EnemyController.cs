@@ -90,6 +90,7 @@ public class EnemyController : MonoBehaviour {
 
   // Select a target for the Enemy to attack
   void SelectTarget() {
+    touchingStation = false;
 
     GameObject player = GameObject.FindGameObjectWithTag(Tags.PLAYER);
 
@@ -110,7 +111,7 @@ public class EnemyController : MonoBehaviour {
     // Calculate the closest Restoration Station
     foreach (GameObject obj in stations) {
       // Only take into account stations that are not health stations and that are in the same room as the enemy
-      if (obj.name != RestorationStations.HEALTH_STATION && BoardManager.DetermineLocation(obj.transform.position) == enemyLocation) {
+      if (obj.name != RestorationStations.HEALTH_STATION && BoardManager.DetermineLocation(obj.transform.position) == enemyLocation && obj != null) {
         Transform station = obj.transform;
         float distance = Vector2.Distance(gameObject.transform.position, station.position);
 

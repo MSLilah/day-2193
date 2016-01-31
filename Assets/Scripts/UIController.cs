@@ -35,17 +35,23 @@ public class UIController : MonoBehaviour {
 
     int i = 0;
     foreach (GameObject obj in restorationStations) {
-      RestorationStationController rsc = obj.GetComponent<RestorationStationController>();
-      if (rsc.name != RestorationStations.HEALTH_STATION) {
-        uiDisplays[i].text = rsc.GenerateText();
-
-        if (rsc.resourceTotal < 5) {
-          uiDisplays[i].color = Color.red;
-        } else {
+      if (obj != null) {
+        RestorationStationController rsc = obj.GetComponent<RestorationStationController>();
+        if (rsc.name == RestorationStations.OXYGEN_STATION) {
           uiDisplays[i].color = Color.grey;
+          uiDisplays[i].text = "Humans: " + gm.oxygenStationTotal.ToString();
         }
+        else if (rsc.name != RestorationStations.HEALTH_STATION) {
+          uiDisplays[i].text = rsc.GenerateText();
 
-        i++;
+          if (rsc.resourceTotal < 5) {
+            uiDisplays[i].color = Color.red;
+          } else {
+            uiDisplays[i].color = Color.grey;
+          }
+
+          i++;
+        }
       }
     }
   }

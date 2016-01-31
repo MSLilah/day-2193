@@ -71,9 +71,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.0057492256, y: -0.0057492256}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.6553847, y: 2.7591915}
 --- !u!82 &8212676
 AudioSource:
   m_ObjectHideFlags: 1
@@ -92,7 +92,7 @@ AudioSource:
   Spatialize: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 0.758542
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
