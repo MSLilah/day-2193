@@ -100,9 +100,9 @@ public class GameManager : MonoBehaviour {
     switch (location) {
       case BoardManager.Locations.Cockpit:
         Debug.Log("Cockpit");
-        minX = 0;
+        minX = 1;
         maxX = 13;
-        minY = 0;
+        minY = 1;
         maxY = 13;
         break;
       case BoardManager.Locations.Oxygen:
@@ -128,10 +128,10 @@ public class GameManager : MonoBehaviour {
         break;
       default:
         // in case of a default, just go to the cockpit
-        minX = 0;
-        maxX = 15;
-        minY = 0;
-        maxY = 15;
+        minX = 1;
+        maxX = 13;
+        minY = 1;
+        maxY = 13;
         break;
     }
 
