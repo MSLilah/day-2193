@@ -162,7 +162,7 @@ MonoBehaviour:
   name: ResourceStation
   resourceName: Food
   resourceReductionRate: 0.5
-  resourceRestorationRate: 0.8
+  resourceRestorationRate: 2
   damageFromEnemy: 1
   resourceTotal: 20
   damageCooldown: 3
@@ -266,7 +266,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: resourceRestorationRate
-      value: 0.8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: resourceTotal

@@ -161,8 +161,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Console
   resourceName: Thrust
-  resourceReductionRate: 1
-  resourceRestorationRate: 2
+  resourceReductionRate: 2
+  resourceRestorationRate: 4
   damageFromEnemy: 2
   resourceTotal: 85
   damageCooldown: 3
@@ -259,11 +259,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: resourceReductionRate
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: resourceRestorationRate
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: resourceTotal

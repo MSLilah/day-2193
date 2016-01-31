@@ -162,7 +162,7 @@ MonoBehaviour:
   name: OxygenStation
   resourceName: Oxygen
   resourceReductionRate: 1
-  resourceRestorationRate: 3
+  resourceRestorationRate: 5
   damageFromEnemy: 2
   resourceTotal: 90
   damageCooldown: 3
@@ -263,7 +263,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: resourceRestorationRate
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: resourceTotal
