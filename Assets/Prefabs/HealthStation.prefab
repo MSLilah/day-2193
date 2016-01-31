@@ -12,6 +12,7 @@ GameObject:
   - 61: {fileID: 6159154}
   - 61: {fileID: 6187762}
   - 114: {fileID: 11402162}
+  - 82: {fileID: 8253454}
   m_Layer: 0
   m_Name: HealthStation
   m_TagString: RestorationStation
@@ -59,6 +60,80 @@ BoxCollider2D:
   m_Offset: {x: 0.028434496, y: 0}
   serializedVersion: 2
   m_Size: {x: 2.208639, y: 1}
+--- !u!82 &8253454
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 124824}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &11402162
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -75,6 +150,10 @@ MonoBehaviour:
   resourceReductionRate: 0
   resourceRestorationRate: 0
   resourceTotal: 50
+  damageCooldown: 3
+  damage: {fileID: 8300000, guid: 5fe07e59b109b4bcbb0229da0b1eaa90, type: 3}
+  restoreCooldown: 3
+  restore: {fileID: 8300000, guid: 4a8184890d2ec4ce1a0af8b855589978, type: 3}
 --- !u!212 &21244016
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -123,6 +202,30 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: resourceTotal
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: panLevelCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: restore
+      value: 
+      objectReference: {fileID: 8300000, guid: 4a8184890d2ec4ce1a0af8b855589978, type: 3}
+    - target: {fileID: 0}
+      propertyPath: restoreCooldown
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: damage
+      value: 
+      objectReference: {fileID: 8300000, guid: 5fe07e59b109b4bcbb0229da0b1eaa90, type: 3}
+    - target: {fileID: 0}
+      propertyPath: damageCooldown
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

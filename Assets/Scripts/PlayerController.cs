@@ -23,6 +23,12 @@ public class PlayerController : MonoBehaviour {
 
   public Vector2 playerDirection;
 
+
+  private AudioSource audio;
+  public float restoreCooldown;
+  private float initRestoreCooldown;
+  public AudioClip restore;
+
   // Use this for initialization
   void Start () {
     playerDirection = new Vector2(0f, 2f);
@@ -35,6 +41,9 @@ public class PlayerController : MonoBehaviour {
     healthRestorationRate = 5.0f;
     sr = gameObject.GetComponent<SpriteRenderer>();
     anim = gameObject.GetComponent<Animator>();
+
+    audio = GetComponent<AudioSource>();
+    initRestoreCooldown = restoreCooldown;
   }
 
   public Vector2 getPlayerDirection() {
@@ -67,6 +76,10 @@ public class PlayerController : MonoBehaviour {
     if (Input.GetKey(KeyCode.LeftShift) && fireDelay <= 0) {
       Attack();
       fireDelay = 0.3f;
+    }
+
+    if (restoreCooldown <= initRestoreCooldown) {
+      restoreCooldown += Time.deltaTime;
     }
 
     Move();
@@ -139,6 +152,10 @@ public class PlayerController : MonoBehaviour {
   }
 
   public void RestoreHealth(float toRestore) {
+    if (restoreCooldown >= initRestoreCooldown) {
+      audio.PlayOneShot(restore, 0.7F);
+      restoreCooldown = 0f;
+    }
     health = Mathf.Min(health + toRestore, maxHealth);
   }
 }
