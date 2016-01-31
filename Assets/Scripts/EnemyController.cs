@@ -13,12 +13,27 @@ public class EnemyController : MonoBehaviour {
 
   private GameManager gm;
   private Animator anim;
+
+  private AudioSource audio;
+  public AudioClip death1;
+  public AudioClip death2;
+  public AudioClip death3;
+
+  private float roarCooldown;
+  public AudioClip roar1;
+  public AudioClip roar2;
+  public AudioClip roar3;
+  public AudioClip roar4;
+
   // Use this for initialization
   void Start () {
     rb = gameObject.GetComponent<Rigidbody2D>();
     gm = GameObject.FindGameObjectWithTag(Tags.GAME_CONTROLLER).GetComponent<GameManager>();
     attackingTarget = false;
     anim = gameObject.GetComponent<Animator>();
+
+    audio = GetComponent<AudioSource>();
+    roarCooldown = 3f;
   }
 
   // Update is called once per frame
@@ -28,6 +43,10 @@ public class EnemyController : MonoBehaviour {
     }
 
     Move();
+
+    if (roarCooldown <= 3f) {
+      roarCooldown += Time.deltaTime;
+    }
 
     if (attackingTarget) {
       AttackTarget();
@@ -107,12 +126,40 @@ public class EnemyController : MonoBehaviour {
       target.GetComponent<RestorationStationController>().DamageResource();
     } else if (target.tag == Tags.PLAYER) {
       target.GetComponent<PlayerController>().Damage(enemyDamage);
+
+      if (roarCooldown >= 3f) {
+        int randomAttackSound = Random.Range(0,100);
+        if (randomAttackSound % 5 == 0) {
+          int randomSound = Random.Range(0, 4);
+          if (randomSound == 0) {
+            audio.PlayOneShot(roar1, 1.0F);
+          } else if (randomSound == 1) {
+            audio.PlayOneShot(roar2, 1.0F);
+          } else if (randomSound == 2) {
+            audio.PlayOneShot(roar3, 1.0F);
+          } else if (randomSound == 3) {
+            audio.PlayOneShot(roar4, 1.0F);
+          }
+        }
+
+        roarCooldown = 0f;
+      }
     }
   }
 
   public void Damage(float damage) {
     enemyHealth -= damage;
     if (enemyHealth <= 0) {
+      int randomDeathSound = Random.Range(0, 2);
+
+      if (randomDeathSound == 0) {
+        audio.PlayOneShot(death1, 1.0F);
+      } else if (randomDeathSound == 1) {
+        audio.PlayOneShot(death2, 1.0F);
+      } else if (randomDeathSound == 2) {
+        audio.PlayOneShot(death3, 1.0F);
+      }
+
       Destroy(this.gameObject);
     } else {
       target = GameObject.FindGameObjectWithTag(Tags.PLAYER);

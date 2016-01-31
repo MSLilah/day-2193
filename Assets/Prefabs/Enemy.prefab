@@ -13,7 +13,8 @@ GameObject:
   - 61: {fileID: 6190928}
   - 114: {fileID: 11454490}
   - 61: {fileID: 6120864}
-  - 95: {fileID: 9565324}
+  - 82: {fileID: 8240836}
+  - 95: {fileID: 9527438}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -28,7 +29,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 174370}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.35289955, y: -4.422955, z: 0}
+  m_LocalPosition: {x: 1.2903986, y: 1.9288449, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -78,7 +79,81 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
---- !u!95 &9565324
+--- !u!82 &8240836
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 174370}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!95 &9527438
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
@@ -106,9 +181,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40166b3486ec34047aed502d229ff89a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySpeed: 1
+  enemySpeed: 3
   enemyDamage: 10
   enemyHealth: 15
+  death1: {fileID: 8300000, guid: 8e25fc9b793c34fcba04379f687cb880, type: 3}
+  death2: {fileID: 8300000, guid: e37fa1c3602b743b1ae77ae857d63284, type: 3}
+  death3: {fileID: 8300000, guid: 793f2cf432e4540a0b1282adb94d8be9, type: 3}
+  roar1: {fileID: 8300000, guid: d94ff9cbe8a7744b0b0c80efb50befbf, type: 3}
+  roar2: {fileID: 8300000, guid: 0014a6c5df5634b7781b912b507a8621, type: 3}
+  roar3: {fileID: 8300000, guid: 4e3a711885e284ff39f601e870986bce, type: 3}
+  roar4: {fileID: 8300000, guid: e216ea6a02f9044f3ae17245371d1411, type: 3}
 --- !u!212 &21264750
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -147,8 +229,12 @@ Prefab:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 0}
-      propertyPath: enemyDamage
-      value: 10
+      propertyPath: panLevelCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
