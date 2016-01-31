@@ -29,6 +29,10 @@ public class PlayerController : MonoBehaviour {
   private float initRestoreCooldown;
   public AudioClip restore;
 
+  public float fireCooldown;
+  private float initFireCooldown;
+  public AudioClip fireSound;
+
   // Use this for initialization
   void Start () {
     playerDirection = new Vector2(0f, 2f);
@@ -44,6 +48,7 @@ public class PlayerController : MonoBehaviour {
 
     audio = GetComponent<AudioSource>();
     initRestoreCooldown = restoreCooldown;
+    initFireCooldown = fireCooldown;
   }
 
   public Vector2 getPlayerDirection() {
@@ -76,6 +81,10 @@ public class PlayerController : MonoBehaviour {
 
     Instantiate(projectile, playerPosition, Quaternion.identity);
 
+    if (fireCooldown >= initFireCooldown) {
+      audio.PlayOneShot(fireSound, 0.7F);
+    }
+
   }
 
   // Update is called once per frame
@@ -91,6 +100,11 @@ public class PlayerController : MonoBehaviour {
 
     if (restoreCooldown <= initRestoreCooldown) {
       restoreCooldown += Time.deltaTime;
+    }
+
+
+    if (fireCooldown <= initFireCooldown) {
+      fireCooldown += Time.deltaTime;
     }
 
     Move();
