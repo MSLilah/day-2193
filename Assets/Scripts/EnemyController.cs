@@ -62,12 +62,16 @@ public class EnemyController : MonoBehaviour {
         canAttack = true;
       }
     }
+
+    if (touchingPlayer) {
+      GameObject.FindGameObjectWithTag(Tags.PLAYER).GetComponent<PlayerController>().Damage(enemyDamage);
+    }
   }
 
   void OnTriggerEnter2D(Collider2D other) {
     if (other.gameObject.tag == Tags.RESTORATION_STATION && other.gameObject == target) {
       touchingStation = true;
-    } else if (other.gameObject.tag == Tags.PLAYER && other.gameObject == target) {
+    } else if (other.gameObject.tag == Tags.PLAYER) {
       touchingPlayer = true;
     }
   }
