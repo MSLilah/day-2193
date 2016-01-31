@@ -25,7 +25,9 @@ public class RestorationStationController : MonoBehaviour {
   private float initRestoreCooldown;
   public AudioClip restore;
 
-  private GameObject bar;
+  public GameObject bar;
+  private SpriteRenderer barSR;
+  public Sprite[] barSprites;
 
   void Start() {
     resourceGameOverValue = 0f;
@@ -34,6 +36,12 @@ public class RestorationStationController : MonoBehaviour {
     audio = GetComponent<AudioSource>();
     initDamageCooldown = damageCooldown;
     initRestoreCooldown = restoreCooldown;
+
+    if (name == RestorationStations.OXYGEN_STATION) {
+      barSR = bar.GetComponent<SpriteRenderer>();
+
+      barSR.sprite = barSprites[10];
+    }
   }
 
   void Update() {
@@ -49,6 +57,15 @@ public class RestorationStationController : MonoBehaviour {
     if (damageCooldown <= initDamageCooldown) {
       damageCooldown += Time.deltaTime;
     }
+
+    if (name == RestorationStations.OXYGEN_STATION) {
+      DrawBar();
+    }
+  }
+
+  void DrawBar() {
+    int barPercent = Mathf.FloorToInt(resourceTotal) / 10;
+    barSR.sprite = barSprites[barPercent];
   }
 
   public void DecreaseResourceTotal(float reduction) {
