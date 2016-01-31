@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour {
 
   private GameObject collidingStation;
   private SpriteRenderer sr;
+  private Animator anim;
 
   public Vector2 playerDirection;
 
@@ -33,6 +34,7 @@ public class PlayerController : MonoBehaviour {
     canInteract = false;
     healthRestorationRate = 5.0f;
     sr = gameObject.GetComponent<SpriteRenderer>();
+    anim = gameObject.GetComponent<Animator>();
   }
 
   public Vector2 getPlayerDirection() {
@@ -100,6 +102,12 @@ public class PlayerController : MonoBehaviour {
     }
 
     rb.velocity = new Vector2(xVel, yVel);
+
+    if (rb.velocity.magnitude != 0) {
+      anim.SetBool("Walking", true);
+    } else {
+      anim.SetBool("Walking", false);
+    }
   }
 
   void InteractWithStation() {
