@@ -9,7 +9,7 @@ public class BoardManager : MonoBehaviour {
   private GameObject wall;
   private GameObject floor;
 
-  public enum Locations {Cockpit, Oxygen, Health, Items, Unknown};
+  public enum Locations {Cockpit, Oxygen, Items, Health, Unknown};
 
   public static Locations DetermineLocation(Vector2 location) {
     if ((location.x >= 0 && location.x < 15) &&

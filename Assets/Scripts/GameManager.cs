@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour {
 
@@ -9,6 +10,10 @@ public class GameManager : MonoBehaviour {
   public GameObject floor;
   public GameObject robot;
   public GameObject projectile;
+
+  public GameObject enemy;
+  private List<EnemyController> enemies;
+  private float enemySpawnCooldown;
 
   //TODO: Remove this element as it is here for debugging purposes. We will
   // have a nicer display later
@@ -71,7 +76,10 @@ public class GameManager : MonoBehaviour {
     player = GameObject.FindGameObjectWithTag(Tags.PLAYER);
     pc = player.GetComponent<PlayerController>();
 
+
     boardManager.GenerateBoard(wall, floor);
+
+    enemySpawnCooldown = 0f;
   }
 
   void GameOver() {
@@ -109,6 +117,15 @@ public class GameManager : MonoBehaviour {
   void Update() {
     if (IsGameOver()) {
       GameOver();
+    }
+
+    if (enemySpawnCooldown >= 0) {
+      enemySpawnCooldown -= Time.deltaTime;
+    }
+
+    if (Mathf.FloorToInt(timeLeft) % 8 == 0 && enemySpawnCooldown < 0) {
+      SpawnEnemies(Random.Range(1, 3), (BoardManager.Locations)Random.Range(0,3));
+      enemySpawnCooldown = 5f;
     }
 
     // Decrease resources
@@ -162,5 +179,64 @@ public class GameManager : MonoBehaviour {
         // Do nothing, as this was errantly triggered
         break;
     }
+  }
+
+  void SpawnEnemies(int total, BoardManager.Locations location) {
+    //enemies.Clear();
+
+    Debug.Log("Total: " + total + " Location: " + location);
+    for (int i = 0; i < total; i++) {
+      SpawnEnemy(location);
+    }
+  }
+
+  void SpawnEnemy(BoardManager.Locations location) {
+    Vector3 position;
+
+    float minX;
+    float maxX;
+    float minY;
+    float maxY;
+
+    switch (location) {
+      case BoardManager.Locations.Cockpit:
+        Debug.Log("Cockpit");
+        minX = 0;
+        maxX = 13;
+        minY = 0;
+        maxY = 13;
+        break;
+      case BoardManager.Locations.Oxygen:
+        Debug.Log("Oxygen");
+        minX = 15;
+        maxX = 29;
+        minY = 7;
+        maxY = 22;
+        break;
+      case BoardManager.Locations.Items:
+        Debug.Log("Items");
+        minX = -15;
+        maxX = -1;
+        minY = 7;
+        maxY = 22;
+        break;
+      case BoardManager.Locations.Health:
+        Debug.Log("Health");
+        minX = 0;
+        maxX = 14;
+        minY = 15;
+        maxY = 29;
+        break;
+      default:
+        // in case of a default, just go to the cockpit
+        minX = 0;
+        maxX = 15;
+        minY = 0;
+        maxY = 15;
+        break;
+    }
+
+    position = new Vector3(Random.Range(minX, maxY), Random.Range(minY, maxY), 0f);
+    GameObject en = Instantiate(enemy, position, Quaternion.identity) as GameObject;
   }
 }
