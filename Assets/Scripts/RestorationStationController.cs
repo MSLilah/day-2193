@@ -41,6 +41,10 @@ public class RestorationStationController : MonoBehaviour {
       barSR = bar.GetComponent<SpriteRenderer>();
 
       barSR.sprite = barSprites[10];
+    } else if (name == RestorationStations.RESOURCE_STATION) {
+      barSR = bar.GetComponent<SpriteRenderer>();
+
+      barSR.sprite = barSprites[9];
     }
   }
 
@@ -58,14 +62,22 @@ public class RestorationStationController : MonoBehaviour {
       damageCooldown += Time.deltaTime;
     }
 
-    if (name == RestorationStations.OXYGEN_STATION) {
+    if (name == RestorationStations.OXYGEN_STATION || name == RestorationStations.RESOURCE_STATION) {
       DrawBar();
     }
   }
 
   void DrawBar() {
-    int barPercent = Mathf.FloorToInt(resourceTotal) / 10;
-    barSR.sprite = barSprites[barPercent];
+    if (name == RestorationStations.OXYGEN_STATION) {
+      int barPercent = Mathf.FloorToInt(resourceTotal) / 10;
+
+      barSR.sprite = barSprites[barPercent];
+    } else if (name == RestorationStations.RESOURCE_STATION) {
+      float barPercent = ((resourceTotal / 20)*10)-1;
+      Debug.Log(barPercent);
+      barSR.sprite = barSprites[(int)barPercent];
+    }
+
   }
 
   public void DecreaseResourceTotal(float reduction) {
