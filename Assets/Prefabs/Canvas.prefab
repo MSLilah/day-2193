@@ -155,9 +155,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'This is the score thing
-
-'
+  m_Text: 'Course Correction: 82'
 --- !u!114 &11450462
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -223,9 +221,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'New Text
-
-'
+  m_Text: 'Resources: 19'
 --- !u!114 &11471204
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -258,7 +254,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: 'Oxygen: 79'
 --- !u!222 &22216836
 CanvasRenderer:
   m_ObjectHideFlags: 1
