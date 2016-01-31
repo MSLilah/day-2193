@@ -71,7 +71,13 @@ public class RestorationStationController : MonoBehaviour {
   public void DecreaseResourceTotal(float reduction) {
     resourceTotal -= reduction;
     if (resourceTotal <= resourceGameOverValue) {
-      gm.GameOver();
+
+      if (name == RestorationStations.OXYGEN_STATION) {
+        gm.killOxygenStation();
+        Destroy(this.gameObject);
+      } else {
+        gm.GameOver();
+      }
     }
   }
 
