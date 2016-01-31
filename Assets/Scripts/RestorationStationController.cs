@@ -66,7 +66,7 @@ public class RestorationStationController : MonoBehaviour {
   }
 
   public void DamageResource() {
-    DecreaseResourceTotal(3 * resourceReductionRate * Time.deltaTime);
+    DecreaseResourceTotal(resourceReductionRate * Time.deltaTime);
     if (damageCooldown >= initDamageCooldown) {
       audio.PlayOneShot(damage, 0.7F);
       damageCooldown = 0f;
