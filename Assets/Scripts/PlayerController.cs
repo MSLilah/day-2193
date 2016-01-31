@@ -42,7 +42,6 @@ public class PlayerController : MonoBehaviour {
   void Attack() {
     Vector3 playerPosition = transform.position;
 
-    Debug.Log(playerDirection);
     if (playerDirection.x == 0 && playerDirection.y > 0) {
       playerPosition.y += 1.0f;
     } else if (playerDirection.x == 0 && playerDirection.y < 0) {
