@@ -31,7 +31,11 @@ public class RestorationStationController : MonoBehaviour {
 
   void Start() {
     resourceGameOverValue = 0f;
-    resourceMaxValue = 100f;
+    if (name != RestorationStations.RESOURCE_STATION) {
+      resourceMaxValue = 100f;
+    } else {
+      resourceMaxValue = 20f;
+    }
     gm = GameObject.FindGameObjectWithTag(Tags.GAME_CONTROLLER).GetComponent<GameManager>();
     audio = GetComponent<AudioSource>();
     initDamageCooldown = damageCooldown;
