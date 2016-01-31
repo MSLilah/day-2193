@@ -13,6 +13,7 @@ public class EnemyController : MonoBehaviour {
 
   private GameManager gm;
   private Animator anim;
+  private SpriteRenderer sr;
 
   private AudioSource audio;
   public AudioClip death1;
@@ -34,6 +35,8 @@ public class EnemyController : MonoBehaviour {
 
     audio = GetComponent<AudioSource>();
     roarCooldown = 3f;
+
+    sr = gameObject.GetComponent<SpriteRenderer>();
   }
 
   // Update is called once per frame
@@ -115,9 +118,25 @@ public class EnemyController : MonoBehaviour {
     if (!attackingTarget) {
       rb.velocity = direction * enemySpeed;
       anim.SetBool("Walking", true);
+      if (Mathf.Abs(direction.y) > Mathf.Abs(direction.x)) {
+        if (direction.y > 0) {
+          anim.SetInteger("Direction", 3);
+        } else {
+          anim.SetInteger("Direction", 2);
+        }
+      } else {
+        if (direction.x > 0) {
+          anim.SetInteger("Direction", 0);
+          sr.flipX = false;
+        } else {
+          anim.SetInteger("Direction", 1);
+          sr.flipX = true;
+        }
+      }
     } else {
       rb.velocity = Vector2.zero;
       anim.SetBool("Walking", false);
+      anim.SetInteger("Direction", -1);
     }
   }
 

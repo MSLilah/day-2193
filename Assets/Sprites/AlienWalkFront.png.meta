@@ -1,0 +1,292 @@
+fileFormatVersion: 2
+guid: d62ed6594619d44fa982b34fc5b28f36
+timeCreated: 1454256903
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: AlienWalkFront_0
+    21300002: AlienWalkFront_1
+    21300004: AlienWalkFront_2
+    21300006: AlienWalkFront_3
+    21300008: AlienWalkFront_4
+    21300010: AlienWalkFront_5
+    21300012: AlienWalkFront_6
+    21300014: AlienWalkFront_7
+    21300016: AlienWalkFront_8
+    21300018: AlienWalkFront_9
+    21300020: AlienWalkFront_10
+    21300022: AlienWalkFront_11
+    21300024: AlienWalkFront_12
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 64
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: AlienWalkFront_0
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 540
+        width: 48
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 32.5}
+        - {x: -24, y: 23.5}
+        - {x: -24, y: -32.5}
+        - {x: 22, y: -32.5}
+        - {x: 24, y: -30.5}
+        - {x: 24, y: 29.5}
+        - {x: 14, y: 32.5}
+    - name: AlienWalkFront_1
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 540
+        width: 48
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 32.5}
+        - {x: -24, y: 30.5}
+        - {x: -24, y: -32.5}
+        - {x: 24, y: -32.5}
+        - {x: 24, y: 32.5}
+    - name: AlienWalkFront_2
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 541
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -19, y: 32}
+        - {x: -24, y: 30}
+        - {x: -24, y: -32}
+        - {x: 22, y: -32}
+        - {x: 24, y: -31}
+        - {x: 24, y: 28}
+        - {x: 21, y: 32}
+    - name: AlienWalkFront_3
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 414
+        width: 48
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 31.5}
+        - {x: -24, y: 25.5}
+        - {x: -24, y: -31.5}
+        - {x: 24, y: -31.5}
+        - {x: 24, y: 25.5}
+        - {x: 13, y: 31.5}
+    - name: AlienWalkFront_4
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 413
+        width: 48
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: 31.5}
+        - {x: -24, y: 21.5}
+        - {x: -24, y: -31.5}
+        - {x: 24, y: -31.5}
+        - {x: 24, y: 21.5}
+        - {x: 18, y: 31.5}
+    - name: AlienWalkFront_5
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 412
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24, y: 32}
+        - {x: -24, y: -31}
+        - {x: -15, y: -32}
+        - {x: 24, y: -32}
+        - {x: 24, y: 32}
+    - name: AlienWalkFront_6
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 284
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24, y: 32}
+        - {x: -24, y: -31}
+        - {x: -15, y: -32}
+        - {x: 24, y: -32}
+        - {x: 24, y: 32}
+    - name: AlienWalkFront_7
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 285
+        width: 48
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: 31.5}
+        - {x: -24, y: 21.5}
+        - {x: -24, y: -31.5}
+        - {x: 24, y: -31.5}
+        - {x: 24, y: 21.5}
+        - {x: 18, y: 31.5}
+    - name: AlienWalkFront_8
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 286
+        width: 48
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: 31}
+        - {x: -24, y: 22}
+        - {x: -24, y: -31}
+        - {x: 23, y: -31}
+        - {x: 24, y: -29}
+        - {x: 24, y: 23}
+        - {x: 22, y: 31}
+    - name: AlienWalkFront_9
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 157
+        width: 48
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 16, y: 31.5}
+        - {x: -15, y: 31.5}
+        - {x: -24, y: 28.5}
+        - {x: -24, y: -28.5}
+        - {x: -22, y: -31.5}
+        - {x: 24, y: -31.5}
+        - {x: 24, y: 21.5}
+        - {x: 22, y: 23.5}
+    - name: AlienWalkFront_10
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 156
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 18, y: 32}
+        - {x: -16, y: 32}
+        - {x: -24, y: 29}
+        - {x: -24, y: -32}
+        - {x: 21, y: -32}
+        - {x: 24, y: -30}
+        - {x: 24, y: 27}
+    - name: AlienWalkFront_11
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 156
+        width: 48
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 32.5}
+        - {x: -24, y: 30.5}
+        - {x: -24, y: -32.5}
+        - {x: 24, y: -32.5}
+        - {x: 24, y: 32.5}
+    - name: AlienWalkFront_12
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 28
+        width: 48
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 32.5}
+        - {x: -24, y: 30.5}
+        - {x: -24, y: -32.5}
+        - {x: 24, y: -32.5}
+        - {x: 24, y: 32.5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
