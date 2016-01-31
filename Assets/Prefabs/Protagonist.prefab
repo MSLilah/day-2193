@@ -211,7 +211,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 5ee95b323f1c94913987c2dda0184464, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
   m_FlipX: 0
   m_FlipY: 0
 --- !u!1001 &100100000
@@ -233,6 +233,18 @@ Prefab:
       propertyPath: projectile
       value: 
       objectReference: {fileID: 158972, guid: ebe0fd338144b40a3806a2c916c7be4e, type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_Color.r
+      value: 0.89705884
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Color.g
+      value: 0.89705884
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Color.b
+      value: 0.89705884
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 132356}
