@@ -1,0 +1,430 @@
+fileFormatVersion: 2
+guid: 983ee742ddcd149ab8924e4354d7cac1
+timeCreated: 1454206816
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: RobotWalk_0
+    21300002: RobotWalk_1
+    21300004: RobotWalk_2
+    21300006: RobotWalk_3
+    21300008: RobotWalk_4
+    21300010: RobotWalk_5
+    21300012: RobotWalk_6
+    21300014: RobotWalk_7
+    21300016: RobotWalk_8
+    21300018: RobotWalk_9
+    21300020: RobotWalk_10
+    21300022: RobotWalk_11
+    21300024: RobotWalk_12
+    21300026: RobotWalk_13
+    21300028: RobotWalk_14
+    21300030: RobotWalk_15
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 64
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: RobotWalk_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 400
+        width: 91
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 1.5, y: -44.5}
+        - {x: 1.5, y: -45.5}
+        - {x: 2.5, y: -48.5}
+        - {x: 45.5, y: -48.5}
+        - {x: 45.5, y: 41.5}
+        - {x: 44.5, y: 47.5}
+        - {x: 42.5, y: 48.5}
+        - {x: -42.5, y: 48.5}
+        - {x: -45.5, y: 28.5}
+        - {x: -45.5, y: -48.5}
+        - {x: -2.5, y: -48.5}
+        - {x: 1.5, y: -44.5}
+        - {x: 1.5, y: -33.5}
+        - {x: 4.5, y: -36.5}
+    - name: RobotWalk_1
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 400
+        width: 91
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 42.5, y: 48.5}
+        - {x: -42.5, y: 48.5}
+        - {x: -45.5, y: 28.5}
+        - {x: -45.5, y: -40.5}
+        - {x: -31.5, y: -43.5}
+        - {x: -28.5, y: -39.5}
+        - {x: -24.5, y: -31.5}
+        - {x: -23.5, y: -21.5}
+        - {x: -23.5, y: -48.5}
+        - {x: 45.5, y: -48.5}
+        - {x: 45.5, y: 40.5}
+        - {x: 44.5, y: 47.5}
+    - name: RobotWalk_2
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 400
+        width: 91
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 42.5, y: 48}
+        - {x: -45.5, y: 48}
+        - {x: -45.5, y: -44}
+        - {x: -31.5, y: -44}
+        - {x: -28.5, y: -40}
+        - {x: -24.5, y: -32}
+        - {x: -23.5, y: -22}
+        - {x: -23.5, y: -34}
+        - {x: -17.5, y: -48}
+        - {x: 45.5, y: -48}
+        - {x: 45.5, y: 39}
+        - {x: 44.5, y: 47}
+    - name: RobotWalk_3
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 399
+        width: 89
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -39.5, y: 48}
+        - {x: -44.5, y: 44}
+        - {x: -44.5, y: -41}
+        - {x: -30.5, y: -44}
+        - {x: -27.5, y: -40}
+        - {x: -23.5, y: -32}
+        - {x: -22.5, y: -22}
+        - {x: -17.5, y: -48}
+        - {x: 44.5, y: -48}
+        - {x: 44.5, y: 22}
+        - {x: 31.5, y: 48}
+    - name: RobotWalk_4
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 269
+        width: 88
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -44, y: 49}
+        - {x: -44, y: -49}
+        - {x: 44, y: -49}
+        - {x: 44, y: 49}
+    - name: RobotWalk_5
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 268
+        width: 87
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -37.5, y: 49.5}
+        - {x: -43.5, y: 32.5}
+        - {x: -43.5, y: -39.5}
+        - {x: -29.5, y: -42.5}
+        - {x: -25.5, y: -39.5}
+        - {x: -19.5, y: -19.5}
+        - {x: -18.5, y: -29.5}
+        - {x: -11.5, y: -34.5}
+        - {x: -17.5, y: -45.5}
+        - {x: -11.5, y: -49.5}
+        - {x: 31.5, y: -49.5}
+        - {x: 43.5, y: -46.5}
+        - {x: 43.5, y: 44.5}
+        - {x: 37.5, y: 49.5}
+    - name: RobotWalk_6
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 268
+        width: 86
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -41, y: 50}
+        - {x: -43, y: 42}
+        - {x: -43, y: -39}
+        - {x: -29, y: -42}
+        - {x: -25, y: -39}
+        - {x: -19, y: -19}
+        - {x: -19, y: -29}
+        - {x: -18, y: -43}
+        - {x: -14, y: -50}
+        - {x: 37, y: -50}
+        - {x: 43, y: -48}
+        - {x: 43, y: 33}
+        - {x: 37, y: 50}
+    - name: RobotWalk_7
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 268
+        width: 88
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -43, y: 50.5}
+        - {x: -44, y: 48.5}
+        - {x: -44, y: -41.5}
+        - {x: -43, y: -45.5}
+        - {x: -26, y: -38.5}
+        - {x: -20, y: -18.5}
+        - {x: -26, y: -43.5}
+        - {x: -11, y: -50.5}
+        - {x: 44, y: -50.5}
+        - {x: 44, y: 33.5}
+        - {x: 41, y: 50.5}
+    - name: RobotWalk_8
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 140
+        width: 90
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -41, y: 50.5}
+        - {x: -45, y: 37.5}
+        - {x: -45, y: -38.5}
+        - {x: -31, y: -41.5}
+        - {x: -24, y: -29.5}
+        - {x: -23, y: -19.5}
+        - {x: -23, y: -26.5}
+        - {x: -20, y: -48.5}
+        - {x: -6, y: -50.5}
+        - {x: 34, y: -50.5}
+        - {x: 45, y: -47.5}
+        - {x: 45, y: 25.5}
+        - {x: 34, y: 50.5}
+    - name: RobotWalk_9
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 140
+        width: 91
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -44.5, y: 51}
+        - {x: -45.5, y: 42}
+        - {x: -45.5, y: -41}
+        - {x: -31.5, y: -41}
+        - {x: -28.5, y: -37}
+        - {x: -24.5, y: -29}
+        - {x: -23.5, y: -19}
+        - {x: -23.5, y: -27}
+        - {x: -21.5, y: -51}
+        - {x: 45.5, y: -51}
+        - {x: 45.5, y: 18}
+        - {x: 34.5, y: 51}
+    - name: RobotWalk_10
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 141
+        width: 92
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -46, y: -40}
+        - {x: -45, y: -43}
+        - {x: -28, y: -40}
+        - {x: -21, y: -34}
+        - {x: -27, y: -39}
+        - {x: -27, y: -50}
+        - {x: 46, y: -50}
+        - {x: 46, y: 44}
+        - {x: 45, y: 50}
+        - {x: -41, y: 50}
+        - {x: -46, y: 45}
+    - name: RobotWalk_11
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 142
+        width: 92
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -46, y: 49}
+        - {x: -46, y: -47}
+        - {x: -7, y: -46}
+        - {x: -1, y: -40}
+        - {x: -1, y: -24}
+        - {x: 0, y: -33}
+        - {x: 1, y: -49}
+        - {x: 46, y: -49}
+        - {x: 46, y: 49}
+    - name: RobotWalk_12
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 92
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -40, y: 47.5}
+        - {x: -46, y: 40.5}
+        - {x: -46, y: -44.5}
+        - {x: -45, y: -46.5}
+        - {x: -43, y: -47.5}
+        - {x: 46, y: -47.5}
+        - {x: 46, y: 33.5}
+        - {x: 45, y: 47.5}
+    - name: RobotWalk_13
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 16
+        width: 92
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 46, y: 33.5}
+        - {x: 45, y: 47.5}
+        - {x: -40, y: 47.5}
+        - {x: -46, y: 41.5}
+        - {x: -46, y: -47.5}
+        - {x: -5, y: -47.5}
+        - {x: -1, y: -43.5}
+        - {x: 5, y: -47.5}
+        - {x: 46, y: -47.5}
+    - name: RobotWalk_14
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 16
+        width: 92
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -40, y: 48}
+        - {x: -46, y: 42}
+        - {x: -46, y: -48}
+        - {x: 46, y: -48}
+        - {x: 46, y: 34}
+        - {x: 45, y: 48}
+    - name: RobotWalk_15
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 16
+        width: 92
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 2, y: -44.5}
+        - {x: 2, y: -45.5}
+        - {x: 3, y: -48.5}
+        - {x: 46, y: -48.5}
+        - {x: 46, y: 34.5}
+        - {x: 45, y: 48.5}
+        - {x: -40, y: 48.5}
+        - {x: -46, y: 41.5}
+        - {x: -46, y: -40.5}
+        - {x: -32, y: -43.5}
+        - {x: -25, y: -31.5}
+        - {x: -25, y: -22.5}
+        - {x: -28, y: -19.5}
+        - {x: -25, y: -4.5}
+        - {x: -25, y: -33.5}
+        - {x: -19, y: -39.5}
+        - {x: -22, y: -46.5}
+        - {x: -21, y: -48.5}
+        - {x: -2, y: -48.5}
+        - {x: 2, y: -44.5}
+        - {x: 2, y: -33.5}
+        - {x: 5, y: -36.5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
