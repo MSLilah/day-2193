@@ -132,8 +132,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Console
   resourceName: Course
-  resourceReductionRate: 0.5
-  resourceRestorationRate: 1
+  resourceReductionRate: 1
+  resourceRestorationRate: 2
   damageFromEnemy: 2
   resourceTotal: 85
   damageCooldown: 3
@@ -183,11 +183,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: resourceReductionRate
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: resourceRestorationRate
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: resourceTotal
