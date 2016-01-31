@@ -18,9 +18,13 @@ public class GameManager : MonoBehaviour {
   private BoardManager boardManager;
 
   public GameObject console;
-  public GameObject oxygenStation;
   public GameObject resourceStation;
   public GameObject healthStation;
+
+  public GameObject oxygenStationCory;
+  public GameObject oxygenStationBrian;
+  public GameObject oxygenStationPreben;
+  public GameObject oxygenStationJoseph;
 
   public float timeLeft;
 
@@ -29,13 +33,17 @@ public class GameManager : MonoBehaviour {
   private GameObject player;
   private PlayerController pc;
 
+  public int oxygenStationTotal;
+
   void StartGame() {
     boardManager.PlaceObj(robot, new Vector3(2.0f, 4.0f, 0f));
 
     boardManager.PlaceObj(console, new Vector3(8.0f, 3.0f, 0f));
-    boardManager.PlaceObj(oxygenStation, new Vector3(23f, 17f, 0f));
     boardManager.PlaceObj(resourceStation, new Vector3(-12f, 13f, 0f));
     boardManager.PlaceObj(healthStation, new Vector3(8.0f, 23f, 0f));
+
+    boardManager.PlaceObj(oxygenStationCory, new Vector3(23f, 17f, 0f));
+    //boardManager.PlaceObj(oxygenStationBrian, new Vector3(23f, 8f, 0f));
 
     timeLeft = 90f;
 
@@ -45,6 +53,16 @@ public class GameManager : MonoBehaviour {
     boardManager.GenerateBoard(wall, floor);
 
     enemySpawnCooldown = 0f;
+
+    oxygenStationTotal = 2;
+  }
+
+  public void killOxygenStation() {
+    if (oxygenStationTotal > 1) {
+      oxygenStationTotal--;
+    } else {
+      GameOver();
+    }
   }
 
   public void GameOver() {
