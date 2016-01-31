@@ -89,10 +89,10 @@ public class GameManager : MonoBehaviour {
   void SpawnEnemy(BoardManager.Locations location) {
     Vector3 position;
 
-    float minX;
-    float maxX;
-    float minY;
-    float maxY;
+    float minX = 0f;
+    float maxX = 0f;
+    float minY = 0f;
+    float maxY = 0f;
 
     switch (location) {
       case BoardManager.Locations.Cockpit:
@@ -132,7 +132,7 @@ public class GameManager : MonoBehaviour {
         break;
     }
 
-    position = new Vector3(Random.Range(minX, maxY), Random.Range(minY, maxY), 0f);
+    position = new Vector3(Random.Range(minX, maxX), Random.Range(minY, maxY), 0f);
     Debug.Log("position: " + position + " location: " + location);
     GameObject en = Instantiate(enemy, position, Quaternion.identity) as GameObject;
   }
