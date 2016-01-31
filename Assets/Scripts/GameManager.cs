@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour {
     boardManager.PlaceObj(console, new Vector3(8.0f, 3.0f, 0f));
     boardManager.PlaceObj(oxygenStation, new Vector3(23f, 17f, 0f));
     boardManager.PlaceObj(resourceStation, new Vector3(-12f, 13f, 0f));
-    boardManager.PlaceObj(healthStation, new Vector3(8.0f, 25f, 0f));
+    boardManager.PlaceObj(healthStation, new Vector3(8.0f, 23f, 0f));
 
     timeLeft = 90f;
 
