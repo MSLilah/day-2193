@@ -12,10 +12,11 @@ Controls:
 
 - Movement
   + Arrow Keys
+  + WSAD
 - Interact
-  + Space bar
+  + E
 - Fire
-  + Left Shift
+  + Space bar
 
 ### Team Members
 

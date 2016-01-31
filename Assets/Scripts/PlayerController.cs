@@ -84,7 +84,7 @@ public class PlayerController : MonoBehaviour {
       fireDelay -= Time.deltaTime;
     }
 
-    if (Input.GetKey(KeyCode.LeftShift) && fireDelay <= 0) {
+    if (Input.GetKey(KeyCode.Space) && fireDelay <= 0) {
       Attack();
       fireDelay = 0.3f;
     }
@@ -135,7 +135,7 @@ public class PlayerController : MonoBehaviour {
   }
 
   void InteractWithStation() {
-    if (canInteract && Input.GetKey(KeyCode.Space)) {
+    if (canInteract && Input.GetKey(KeyCode.E)) {
       RestorationStationController rsc = collidingStation.GetComponent<RestorationStationController>();
       if (rsc.name == RestorationStations.HEALTH_STATION) {
         RestoreHealth(healthRestorationRate * Time.deltaTime);
