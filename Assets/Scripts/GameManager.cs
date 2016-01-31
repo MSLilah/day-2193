@@ -35,6 +35,11 @@ public class GameManager : MonoBehaviour {
 
   public int oxygenStationTotal;
 
+  private AudioSource audio;
+  public AudioClip enemySpawnVent;
+  public AudioClip enemySpawnGlass;
+  public AudioClip enemySpawnPot;
+
   void StartGame() {
     boardManager.PlaceObj(robot, new Vector3(2.0f, 17.0f, 0f));
 
@@ -57,6 +62,8 @@ public class GameManager : MonoBehaviour {
     enemySpawnCooldown = 0f;
 
     oxygenStationTotal = 4;
+
+    audio = GetComponent<AudioSource>();
   }
 
   public void killOxygenStation() {
@@ -106,6 +113,24 @@ public class GameManager : MonoBehaviour {
 
     for (int i = 0; i < total; i++) {
       SpawnEnemy(location);
+    }
+
+    switch (location) {
+      case BoardManager.Locations.Cockpit:
+        audio.PlayOneShot(enemySpawnVent, 0.7F);
+        break;
+      case BoardManager.Locations.Oxygen:
+        audio.PlayOneShot(enemySpawnPot, 0.7F);
+        break;
+      case BoardManager.Locations.Items:
+        audio.PlayOneShot(enemySpawnGlass, 0.7F);
+        break;
+      case BoardManager.Locations.Health:
+        audio.PlayOneShot(enemySpawnVent, 0.7F);
+        break;
+      default:
+        audio.PlayOneShot(enemySpawnVent, 0.7F);
+        break;
     }
   }
 
