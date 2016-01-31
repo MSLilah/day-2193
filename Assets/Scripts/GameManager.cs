@@ -137,6 +137,6 @@ public class GameManager : MonoBehaviour {
 
     position = new Vector3(Random.Range(minX, maxX), Random.Range(minY, maxY), 0f);
     Debug.Log("position: " + position + " location: " + location);
-    GameObject en = Instantiate(enemy, position, Quaternion.identity) as GameObject;
+    Instantiate(enemy, position, Quaternion.identity);
   }
 }
