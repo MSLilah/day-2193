@@ -3,7 +3,7 @@ using System.Collections;
 
 public class EnemyController : MonoBehaviour {
 
-  public float enemySpeed = 1f;
+  public float enemySpeed = 3f;
   public float enemyDamage = 5f;
   public float enemyHealth = 15f;
 
@@ -12,12 +12,13 @@ public class EnemyController : MonoBehaviour {
   private bool attackingTarget;
 
   private GameManager gm;
-
+  private Animator anim;
   // Use this for initialization
   void Start () {
     rb = gameObject.GetComponent<Rigidbody2D>();
     gm = GameObject.FindGameObjectWithTag(Tags.GAME_CONTROLLER).GetComponent<GameManager>();
     attackingTarget = false;
+    anim = gameObject.GetComponent<Animator>();
   }
 
   // Update is called once per frame
@@ -92,10 +93,12 @@ public class EnemyController : MonoBehaviour {
 
   void Move() {
     Vector2 direction = (target.transform.position - gameObject.transform.position).normalized;
-    if (DistanceToTarget() > 0.8f) {
+    if (!attackingTarget) {
       rb.velocity = direction * enemySpeed;
+      anim.SetBool("Walking", true);
     } else {
       rb.velocity = Vector2.zero;
+      anim.SetBool("Walking", false);
     }
   }
 
