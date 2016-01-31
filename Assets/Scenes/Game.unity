@@ -202,6 +202,18 @@ Prefab:
       propertyPath: oxygenStationJoseph
       value: 
       objectReference: {fileID: 134320, guid: d08b7f7df9c2e4edc844637ed31ed948, type: 2}
+    - target: {fileID: 11493284, guid: 0965537aea45441808d66028dc17c6f6, type: 2}
+      propertyPath: enemySpawnVent
+      value: 
+      objectReference: {fileID: 8300000, guid: 0b8027d3803224172a3606208256c521, type: 3}
+    - target: {fileID: 11493284, guid: 0965537aea45441808d66028dc17c6f6, type: 2}
+      propertyPath: enemySpawnGlass
+      value: 
+      objectReference: {fileID: 8300000, guid: 058f4b1269f284f34867a2a6eb214b20, type: 3}
+    - target: {fileID: 11493284, guid: 0965537aea45441808d66028dc17c6f6, type: 2}
+      propertyPath: enemySpawnPot
+      value: 
+      objectReference: {fileID: 8300000, guid: 6cf176135d6fe4606bea56270fd097b5, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0965537aea45441808d66028dc17c6f6, type: 2}
   m_IsPrefabParent: 0
@@ -384,6 +396,84 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f055a8ae9f165489183e9e7d81c0a26a, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1128252150 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 181410, guid: 0965537aea45441808d66028dc17c6f6, type: 2}
+  m_PrefabInternal: {fileID: 864386472}
+--- !u!82 &1128252154
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1128252150}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &1705657195 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11468470, guid: f055a8ae9f165489183e9e7d81c0a26a,
@@ -437,6 +527,10 @@ Prefab:
       propertyPath: Loop
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8230842, guid: 84c0e9abf1bd2466d86ca00271ac2f0b, type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d04590d4b815d43c4a5dff5b88925618, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 84c0e9abf1bd2466d86ca00271ac2f0b, type: 2}
   m_IsPrefabParent: 0
