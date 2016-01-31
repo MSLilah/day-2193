@@ -144,7 +144,11 @@ public class EnemyController : MonoBehaviour {
     if (target.tag == Tags.RESTORATION_STATION) {
       target.GetComponent<RestorationStationController>().DamageResource();
     } else if (target.tag == Tags.PLAYER) {
-      target.GetComponent<PlayerController>().Damage(enemyDamage);
+
+      if (DistanceToTarget() <= 1.5f) {
+        // only attack if near enemy
+        target.GetComponent<PlayerController>().Damage(enemyDamage);
+      }
 
       if (roarCooldown >= 3f) {
         int randomAttackSound = Random.Range(0,100);
