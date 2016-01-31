@@ -10,7 +10,6 @@ GameObject:
   - 4: {fileID: 455808}
   - 212: {fileID: 21275560}
   - 61: {fileID: 6103936}
-  - 61: {fileID: 6114580}
   - 114: {fileID: 11405198}
   - 82: {fileID: 8238574}
   m_Layer: 0
@@ -46,20 +45,6 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
---- !u!61 &6114580
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 162494}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_Offset: {x: 0.028434496, y: 0}
-  serializedVersion: 2
-  m_Size: {x: 2.208639, y: 1}
 --- !u!82 &8238574
 AudioSource:
   m_ObjectHideFlags: 1
@@ -149,6 +134,7 @@ MonoBehaviour:
   resourceName: Resources
   resourceReductionRate: 0.2
   resourceRestorationRate: 0.3
+  damageFromEnemy: 1
   resourceTotal: 20
   damageCooldown: 3
   damage: {fileID: 8300000, guid: 5fe07e59b109b4bcbb0229da0b1eaa90, type: 3}
@@ -235,6 +221,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: damageCooldown
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: damageFromEnemy
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

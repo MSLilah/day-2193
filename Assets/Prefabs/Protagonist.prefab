@@ -14,6 +14,7 @@ GameObject:
   - 61: {fileID: 6176362}
   - 95: {fileID: 9536644}
   - 82: {fileID: 8238590}
+  - 61: {fileID: 6115060}
   m_Layer: 0
   m_Name: Protagonist
   m_TagString: Player
@@ -59,7 +60,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 132356}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 413.07263, y: 120.887146, z: 0}
+  m_LocalPosition: {x: 2.434546, y: 5.552626, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 401164}
@@ -116,6 +117,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!61 &6115060
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 132356}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: -0.007099867, y: 0.0071001053}
+  serializedVersion: 2
+  m_Size: {x: 1.7200755, y: 1.9047241}
 --- !u!61 &6176362
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -321,8 +336,6 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Color.b
       value: 0.89705884
-      propertyPath: restore
-      value: 
       objectReference: {fileID: 8300000, guid: 4a8184890d2ec4ce1a0af8b855589978, type: 3}
     - target: {fileID: 0}
       propertyPath: restoreCooldown
