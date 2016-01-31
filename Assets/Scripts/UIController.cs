@@ -20,13 +20,23 @@ public class UIController : MonoBehaviour {
   void Update() {
     healthDisplay.text = "Health: " + Mathf.CeilToInt(pc.health);
 
-    timeDisplay.text = "Time: " + gm.timeLeft.ToString("F2");
+    if (gm.timeLeft < 30f) {
+      timeDisplay.text = "Time: " + gm.timeLeft.ToString("F2");
+      timeDisplay.color = Color.red;
+    } else {
+      timeDisplay.text = "Time: " + gm.timeLeft.ToString("F2");
+    }
 
     int i = 0;
     foreach (GameObject obj in restorationStations) {
       RestorationStationController rsc = obj.GetComponent<RestorationStationController>();
       if (rsc.name != RestorationStations.HEALTH_STATION) {
         uiDisplays[i].text = rsc.GenerateText();
+
+        if (rsc.resourceTotal < 5) {
+          uiDisplays[i].color = Color.red;
+        }
+
         i++;
       }
     }
