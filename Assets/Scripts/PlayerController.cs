@@ -80,7 +80,9 @@ public class PlayerController : MonoBehaviour {
   }
 
   void OnTriggerExit2D(Collider2D other) {
-    canInteract = other.gameObject.tag == Tags.RESTORATION_STATION;
+    if (other.gameObject.tag == Tags.RESTORATION_STATION) {
+      canInteract = false;
+    } 
   }
 
   void Move() {
