@@ -194,6 +194,14 @@ Prefab:
       propertyPath: oxygenStationBrian
       value: 
       objectReference: {fileID: 186618, guid: cbb55602458ca4b7da549325cd276707, type: 2}
+    - target: {fileID: 11493284, guid: 0965537aea45441808d66028dc17c6f6, type: 2}
+      propertyPath: oxygenStationPreben
+      value: 
+      objectReference: {fileID: 138188, guid: 4c27aac5416b04e1f85d57d87f42a6fa, type: 2}
+    - target: {fileID: 11493284, guid: 0965537aea45441808d66028dc17c6f6, type: 2}
+      propertyPath: oxygenStationJoseph
+      value: 
+      objectReference: {fileID: 134320, guid: d08b7f7df9c2e4edc844637ed31ed948, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0965537aea45441808d66028dc17c6f6, type: 2}
   m_IsPrefabParent: 0
