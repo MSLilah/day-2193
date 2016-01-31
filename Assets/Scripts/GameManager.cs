@@ -53,6 +53,7 @@ public class GameManager : MonoBehaviour {
   }
 
   void WinGame() {
+    Debug.Log("You win!");
     SceneManager.LoadScene(Scenes.GAME_WIN);
   }
 
@@ -63,7 +64,8 @@ public class GameManager : MonoBehaviour {
 
   void Update() {
     timeLeft -= Time.deltaTime;
-    if (timeLeft <= 0) {
+
+    if (timeLeft <= 0f) {
       WinGame();
     }
 
