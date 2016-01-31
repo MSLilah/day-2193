@@ -33,6 +33,10 @@ public class PlayerController : MonoBehaviour {
   private float initFireCooldown;
   public AudioClip fireSound;
 
+  public AudioClip damageSound;
+  public float damageCooldown;
+  private float initDamageCooldown;
+
   // Use this for initialization
   void Start () {
     playerDirection = new Vector2(0f, 2f);
@@ -49,6 +53,7 @@ public class PlayerController : MonoBehaviour {
     audio = GetComponent<AudioSource>();
     initRestoreCooldown = restoreCooldown;
     initFireCooldown = fireCooldown;
+    initDamageCooldown = damageCooldown;
   }
 
   public Vector2 getPlayerDirection() {
@@ -95,6 +100,11 @@ public class PlayerController : MonoBehaviour {
       fireCooldown += Time.deltaTime;
     }
 
+    if (damageCooldown <= initDamageCooldown) {
+      Debug.Log("increase damage cooldown");
+      damageCooldown += Time.deltaTime;
+    }
+
     Move();
     InteractWithStation();
   }
@@ -109,7 +119,7 @@ public class PlayerController : MonoBehaviour {
   void OnTriggerExit2D(Collider2D other) {
     if (other.gameObject.tag == Tags.RESTORATION_STATION) {
       canInteract = false;
-    } 
+    }
   }
 
   void Move() {
@@ -150,6 +160,14 @@ public class PlayerController : MonoBehaviour {
   public void Damage(float damage) {
     if (!invincible) {
       health -= damage;
+
+      Debug.Log(damageCooldown);
+      if (damageCooldown >= 3f) {
+        Debug.Log("play damage sound");
+        audio.PlayOneShot(damageSound, 0.7F);
+        damageCooldown = 0f;
+      }
+
       if (health <= 0) {
         gameManager.GameOver();
       } else {

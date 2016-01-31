@@ -13,8 +13,8 @@ GameObject:
   - 114: {fileID: 11435218}
   - 61: {fileID: 6176362}
   - 95: {fileID: 9536644}
-  - 82: {fileID: 8238590}
   - 61: {fileID: 6115060}
+  - 82: {fileID: 8236146}
   m_Layer: 0
   m_Name: Protagonist
   m_TagString: Player
@@ -152,7 +152,7 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 136644}
   m_Enabled: 1
---- !u!82 &8238590
+--- !u!82 &8236146
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -271,6 +271,8 @@ MonoBehaviour:
   restore: {fileID: 8300000, guid: 4a8184890d2ec4ce1a0af8b855589978, type: 3}
   fireCooldown: 2
   fireSound: {fileID: 8300000, guid: a1e35546978f34d9a8cdede2347dc032, type: 3}
+  damageSound: {fileID: 8300000, guid: 8205ac13db21249518af205078357b58, type: 3}
+  damageCooldown: 2
 --- !u!124 &12426986
 Behaviour:
   m_ObjectHideFlags: 1
@@ -358,6 +360,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_SortingLayerID
       value: 1948668049
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: damageCooldown
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
