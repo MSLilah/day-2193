@@ -40,7 +40,6 @@ public class Projectile : MonoBehaviour {
   }
 
   void OnTriggerEnter2D(Collider2D coll) {
-    print("Collision!");
     if (coll.gameObject.tag == Tags.BORDER) {
       Destroy(gameObject);
     } else if (coll.gameObject.tag == Tags.ENEMY) {
