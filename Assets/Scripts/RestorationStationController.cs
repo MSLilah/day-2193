@@ -74,7 +74,6 @@ public class RestorationStationController : MonoBehaviour {
       barSR.sprite = barSprites[barPercent];
     } else if (name == RestorationStations.RESOURCE_STATION) {
       float barPercent = ((resourceTotal / 20)*10)-1;
-      Debug.Log(barPercent);
       barSR.sprite = barSprites[(int)barPercent];
     }
 
