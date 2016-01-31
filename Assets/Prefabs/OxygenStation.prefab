@@ -149,7 +149,7 @@ MonoBehaviour:
   resourceName: Oxygen
   resourceReductionRate: 1
   resourceRestorationRate: 3
-  resourceTotal: 85
+  resourceTotal: 90
   damageCooldown: 3
   damage: {fileID: 8300000, guid: 5fe07e59b109b4bcbb0229da0b1eaa90, type: 3}
   restoreCooldown: 4
@@ -209,7 +209,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: resourceTotal
-      value: 85
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: resourceText
