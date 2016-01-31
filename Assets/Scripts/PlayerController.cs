@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour {
   private float healthRestorationRate;
 
   private GameObject collidingStation;
+  private SpriteRenderer sr;
 
   public Vector2 playerDirection;
 
@@ -31,6 +32,7 @@ public class PlayerController : MonoBehaviour {
     invincible = false;
     canInteract = false;
     healthRestorationRate = 5.0f;
+    sr = gameObject.GetComponent<SpriteRenderer>();
   }
 
   public Vector2 getPlayerDirection() {
@@ -88,6 +90,12 @@ public class PlayerController : MonoBehaviour {
     if (!(xVel == 0 && yVel == 0)) {
       playerDirection.x = xVel;
       playerDirection.y = yVel;
+    }
+
+    if (playerDirection.x > 0) {
+      sr.flipX = true;
+    } else if (playerDirection.x < 0) {
+      sr.flipX = false;
     }
 
     rb.velocity = new Vector2(xVel, yVel);
