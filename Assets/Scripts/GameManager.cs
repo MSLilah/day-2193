@@ -42,8 +42,10 @@ public class GameManager : MonoBehaviour {
     boardManager.PlaceObj(resourceStation, new Vector3(-12f, 13f, 0f));
     boardManager.PlaceObj(healthStation, new Vector3(8.0f, 23f, 0f));
 
-    boardManager.PlaceObj(oxygenStationCory, new Vector3(23f, 17f, 0f));
-    boardManager.PlaceObj(oxygenStationBrian, new Vector3(25f, 13f, 0f));
+    boardManager.PlaceObj(oxygenStationBrian, new Vector3(23f, 17f, 0f));
+    boardManager.PlaceObj(oxygenStationPreben, new Vector3(25f, 17f, 0f));
+    boardManager.PlaceObj(oxygenStationCory, new Vector3(25f, 14f, 0f));
+    boardManager.PlaceObj(oxygenStationJoseph, new Vector3(23f, 14f, 0f));
 
     timeLeft = 90f;
 
@@ -54,7 +56,7 @@ public class GameManager : MonoBehaviour {
 
     enemySpawnCooldown = 0f;
 
-    oxygenStationTotal = 2;
+    oxygenStationTotal = 4;
   }
 
   public void killOxygenStation() {
