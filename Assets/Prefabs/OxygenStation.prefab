@@ -11,7 +11,7 @@ GameObject:
   - 212: {fileID: 21274638}
   - 61: {fileID: 6179270}
   - 61: {fileID: 6114196}
-  - 114: {fileID: 11402458}
+  - 114: {fileID: 11406314}
   m_Layer: 0
   m_Name: OxygenStation
   m_TagString: RestorationStation
@@ -59,7 +59,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
---- !u!114 &11402458
+--- !u!114 &11406314
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -67,7 +67,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 186136}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42b8b3996770c41f1ad28d59607cb270, type: 3}
+  m_Script: {fileID: 11500000, guid: 95cc98526ac6c4021a0eccbae7b7317d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   name: OxygenStation
@@ -75,7 +75,6 @@ MonoBehaviour:
   resourceReductionRate: 1
   resourceRestorationRate: 2
   resourceTotal: 85
-  resourceText: {fileID: 11471204, guid: f055a8ae9f165489183e9e7d81c0a26a, type: 2}
 --- !u!212 &21274638
 SpriteRenderer:
   m_ObjectHideFlags: 1
