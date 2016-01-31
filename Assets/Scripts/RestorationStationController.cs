@@ -25,6 +25,8 @@ public class RestorationStationController : MonoBehaviour {
   private float initRestoreCooldown;
   public AudioClip restore;
 
+  private GameObject bar;
+
   void Start() {
     resourceGameOverValue = 0f;
     resourceMaxValue = 100f;
