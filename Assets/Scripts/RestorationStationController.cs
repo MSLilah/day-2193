@@ -35,7 +35,10 @@ public class RestorationStationController : MonoBehaviour {
 
   void Update() {
     // Decrease the resource value
-    DecreaseResourceTotal(resourceReductionRate * Time.deltaTime);
+    if (!(RestorationStations.RESOURCE_STATION == name)) {
+      DecreaseResourceTotal(resourceReductionRate * Time.deltaTime);
+    }
+
     if (restoreCooldown <= initRestoreCooldown) {
       restoreCooldown += Time.deltaTime;
     }
