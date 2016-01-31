@@ -11,6 +11,7 @@ GameObject:
   - 212: {fileID: 21275560}
   - 61: {fileID: 6103936}
   - 61: {fileID: 6114580}
+  - 114: {fileID: 11433482}
   m_Layer: 0
   m_Name: ResourceStation
   m_TagString: RestorationStation
@@ -58,6 +59,23 @@ BoxCollider2D:
   m_Offset: {x: 0.028434496, y: 0}
   serializedVersion: 2
   m_Size: {x: 2.208639, y: 1}
+--- !u!114 &11433482
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 162494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42b8b3996770c41f1ad28d59607cb270, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: ItemStation
+  resourceName: Resources
+  resourceReductionRate: 0.2
+  resourceRestorationRate: 0.3
+  resourceTotal: 20
+  resourceText: {fileID: 11468470, guid: f055a8ae9f165489183e9e7d81c0a26a, type: 2}
 --- !u!212 &21275560
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -99,6 +117,31 @@ Prefab:
       propertyPath: m_Name
       value: ItemStation
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: name
+      value: ItemStation
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: resourceName
+      value: Resources
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: resourceReductionRate
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: resourceRestorationRate
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: resourceTotal
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: resourceText
+      value: 
+      objectReference: {fileID: 11468470, guid: f055a8ae9f165489183e9e7d81c0a26a,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 162494}

@@ -101,7 +101,7 @@ public class EnemyController : MonoBehaviour {
 
   void AttackTarget() {
     if (target.tag == Tags.RESTORATION_STATION) {
-      gm.DecreaseResource(target);
+      target.GetComponent<RestorationStationController>().DamageResource();
     } else if (target.tag == Tags.PLAYER) {
       target.GetComponent<PlayerController>().Damage(enemyDamage);
     }

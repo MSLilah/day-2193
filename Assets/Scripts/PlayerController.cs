@@ -8,9 +8,6 @@ public class PlayerController : MonoBehaviour {
   public float maxHealth;
   public float invincibilityWindow = 1.0f;
 
-  // TODO: Remove this
-  public UnityEngine.UI.Text healthText;
-
   public GameObject projectile;
   private float fireDelay = 0f;
 
@@ -18,6 +15,7 @@ public class PlayerController : MonoBehaviour {
   private GameManager gameManager;
   private bool invincible;
   private bool canInteract;
+  private float healthRestorationRate;
 
   private GameObject collidingStation;
 
@@ -32,7 +30,7 @@ public class PlayerController : MonoBehaviour {
     health = maxHealth;
     invincible = false;
     canInteract = false;
-    healthText = GameObject.FindGameObjectWithTag("Respawn").GetComponent<UnityEngine.UI.Text>();
+    healthRestorationRate = 5.0f;
   }
 
   public Vector2 getPlayerDirection() {
@@ -70,9 +68,6 @@ public class PlayerController : MonoBehaviour {
 
     Move();
     InteractWithStation();
-
-    // TODO: Remove this, replace with a health bar or something
-    healthText.text = "Player health: " + Mathf.CeilToInt(health);
   }
 
   void OnTriggerEnter2D(Collider2D other) {
@@ -100,25 +95,30 @@ public class PlayerController : MonoBehaviour {
 
   void InteractWithStation() {
     if (canInteract && Input.GetKey(KeyCode.Space)) {
-      gameManager.RestoreResource(collidingStation);
+      RestorationStationController rsc = collidingStation.GetComponent<RestorationStationController>();
+      if (rsc.name == RestorationStations.HEALTH_STATION) {
+        RestoreHealth(healthRestorationRate * Time.deltaTime);
+      } else {
+        rsc.RestoreResource();
+      }
     }
   }
 
   public void Damage(float damage) {
     if (!invincible) {
       health -= damage;
-      invincible = true;
-      StartCoroutine("InvincibilityTimer");
+      if (health <= 0) {
+        gameManager.GameOver();
+      } else {
+        invincible = true;
+        StartCoroutine("InvincibilityTimer");
+      }
     }
   }
 
   IEnumerator InvincibilityTimer() {
     yield return new WaitForSeconds(invincibilityWindow);
     invincible = false;
-  }
-
-  public bool IsAlive() {
-    return health > 0;
   }
 
   public void RestoreHealth(float toRestore) {

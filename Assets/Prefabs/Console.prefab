@@ -11,6 +11,7 @@ GameObject:
   - 212: {fileID: 21229746}
   - 61: {fileID: 6149826}
   - 61: {fileID: 6148750}
+  - 114: {fileID: 11492550}
   m_Layer: 0
   m_Name: Console
   m_TagString: RestorationStation
@@ -25,7 +26,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 114930}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.65, y: -0.06, z: 0}
+  m_LocalPosition: {x: 7.7863827, y: 7.8653364, z: 0}
   m_LocalScale: {x: 1.8559667, y: 3.8589284, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -58,6 +59,23 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
+--- !u!114 &11492550
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 114930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42b8b3996770c41f1ad28d59607cb270, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Console
+  resourceName: Course Correction
+  resourceReductionRate: 0.5
+  resourceRestorationRate: 1
+  resourceTotal: 85
+  resourceText: {fileID: 11447004, guid: f055a8ae9f165489183e9e7d81c0a26a, type: 2}
 --- !u!212 &21229746
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -94,7 +112,32 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: resourceName
+      value: Course Correction
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: resourceReductionRate
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: resourceRestorationRate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: resourceTotal
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: name
+      value: Console
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: resourceText
+      value: 
+      objectReference: {fileID: 11447004, guid: f055a8ae9f165489183e9e7d81c0a26a,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 114930}
