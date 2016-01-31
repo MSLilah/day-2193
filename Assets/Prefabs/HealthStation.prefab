@@ -10,7 +10,6 @@ GameObject:
   - 4: {fileID: 488604}
   - 212: {fileID: 21244016}
   - 61: {fileID: 6159154}
-  - 61: {fileID: 6187762}
   - 114: {fileID: 11402162}
   - 82: {fileID: 8253454}
   m_Layer: 0
@@ -46,20 +45,6 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
---- !u!61 &6187762
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 124824}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_Offset: {x: 0.028434496, y: 0}
-  serializedVersion: 2
-  m_Size: {x: 2.208639, y: 1}
 --- !u!82 &8253454
 AudioSource:
   m_ObjectHideFlags: 1
@@ -149,6 +134,7 @@ MonoBehaviour:
   resourceName: Ignore
   resourceReductionRate: 0
   resourceRestorationRate: 0
+  damageFromEnemy: 0
   resourceTotal: 50
   damageCooldown: 3
   damage: {fileID: 8300000, guid: 5fe07e59b109b4bcbb0229da0b1eaa90, type: 3}

@@ -1,0 +1,450 @@
+fileFormatVersion: 2
+guid: 94a9a4146e4eb47218b27dc0cb537150
+timeCreated: 1454261670
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: AlienAttackBack_0
+    21300002: AlienAttackBack_1
+    21300004: AlienAttackBack_2
+    21300006: AlienAttackBack_3
+    21300008: AlienAttackBack_4
+    21300010: AlienAttackBack_5
+    21300012: AlienAttackBack_6
+    21300014: AlienAttackBack_7
+    21300016: AlienAttackBack_8
+    21300018: AlienAttackBack_9
+    21300020: AlienAttackBack_10
+    21300022: AlienAttackBack_11
+    21300024: AlienAttackBack_12
+    21300026: AlienAttackBack_13
+    21300028: AlienAttackBack_14
+    21300030: AlienAttackBack_15
+    21300032: AlienAttackBack_16
+    21300034: AlienAttackBack_17
+    21300036: AlienAttackBack_18
+    21300038: AlienAttackBack_19
+    21300040: AlienAttackBack_20
+    21300042: AlienAttackBack_21
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 64
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: AlienAttackBack_0
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 669
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -21, y: 32}
+        - {x: -24, y: 26}
+        - {x: -24, y: -32}
+        - {x: 24, y: -32}
+        - {x: 24, y: 31}
+        - {x: 22, y: 32}
+    - name: AlienAttackBack_1
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 669
+        width: 48
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24, y: 31.5}
+        - {x: -24, y: -31.5}
+        - {x: 24, y: -31.5}
+        - {x: 24, y: 27.5}
+        - {x: 11, y: 31.5}
+    - name: AlienAttackBack_2
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 669
+        width: 48
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17, y: 31}
+        - {x: -24, y: 24}
+        - {x: -24, y: -31}
+        - {x: 24, y: -31}
+        - {x: 24, y: 26}
+        - {x: 10, y: 31}
+    - name: AlienAttackBack_3
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 669
+        width: 48
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 30.5}
+        - {x: -24, y: 27.5}
+        - {x: -24, y: -30.5}
+        - {x: 24, y: -30.5}
+        - {x: 24, y: 29.5}
+        - {x: 22, y: 30.5}
+    - name: AlienAttackBack_4
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 541
+        width: 48
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 30}
+        - {x: -24, y: 24}
+        - {x: -24, y: -29}
+        - {x: -22, y: -30}
+        - {x: 24, y: -30}
+        - {x: 24, y: 30}
+    - name: AlienAttackBack_5
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 541
+        width: 48
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11, y: 29.5}
+        - {x: -24, y: 21.5}
+        - {x: -24, y: -29.5}
+        - {x: 24, y: -29.5}
+        - {x: 24, y: 21.5}
+        - {x: 16, y: 29.5}
+    - name: AlienAttackBack_6
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 541
+        width: 48
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22, y: 33}
+        - {x: -24, y: 31}
+        - {x: -24, y: -33}
+        - {x: 24, y: -33}
+        - {x: 24, y: 28}
+        - {x: 16, y: 33}
+    - name: AlienAttackBack_7
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 543
+        width: 48
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22, y: 34}
+        - {x: -24, y: 33}
+        - {x: -24, y: -34}
+        - {x: 24, y: -34}
+        - {x: 24, y: 34}
+    - name: AlienAttackBack_8
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 418
+        width: 48
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22, y: 34}
+        - {x: -24, y: 33}
+        - {x: -24, y: -34}
+        - {x: 24, y: -34}
+        - {x: 24, y: 34}
+    - name: AlienAttackBack_9
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 421
+        width: 48
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22, y: 37.5}
+        - {x: -24, y: 34.5}
+        - {x: -24, y: -30.5}
+        - {x: 24, y: -30.5}
+        - {x: 24, y: 33.5}
+        - {x: 17, y: 37.5}
+    - name: AlienAttackBack_10
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 421
+        width: 48
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22, y: 39}
+        - {x: -24, y: 36}
+        - {x: -24, y: -28}
+        - {x: 24, y: -28}
+        - {x: 24, y: 35}
+        - {x: 17, y: 39}
+    - name: AlienAttackBack_11
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 421
+        width: 48
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 10, y: 39.5}
+        - {x: -13, y: 39.5}
+        - {x: -24, y: 34.5}
+        - {x: -24, y: -26.5}
+        - {x: 24, y: -26.5}
+        - {x: 24, y: 26.5}
+        - {x: 16, y: 37.5}
+    - name: AlienAttackBack_12
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 284
+        width: 48
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 14, y: 43.5}
+        - {x: -14, y: 43.5}
+        - {x: -24, y: 39.5}
+        - {x: -24, y: -20.5}
+        - {x: 23, y: -20.5}
+        - {x: 24, y: -19.5}
+        - {x: 24, y: 34.5}
+    - name: AlienAttackBack_13
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 285
+        width: 48
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 35}
+        - {x: -24, y: 30}
+        - {x: -24, y: -29}
+        - {x: 24, y: -29}
+        - {x: 24, y: 29}
+        - {x: 13, y: 35}
+    - name: AlienAttackBack_14
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 286
+        width: 48
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -21, y: 31.5}
+        - {x: -24, y: 30.5}
+        - {x: -24, y: -31.5}
+        - {x: 24, y: -31.5}
+        - {x: 24, y: 31.5}
+    - name: AlienAttackBack_15
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 286
+        width: 48
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11, y: 29.5}
+        - {x: -24, y: 21.5}
+        - {x: -24, y: -29.5}
+        - {x: 24, y: -29.5}
+        - {x: 24, y: 21.5}
+        - {x: 16, y: 29.5}
+    - name: AlienAttackBack_16
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 157
+        width: 48
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 29}
+        - {x: -24, y: 26}
+        - {x: -24, y: -29}
+        - {x: 24, y: -29}
+        - {x: 24, y: 25}
+        - {x: 19, y: 29}
+    - name: AlienAttackBack_17
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 157
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: 28}
+        - {x: -24, y: 18}
+        - {x: -24, y: -28}
+        - {x: 24, y: -28}
+        - {x: 24, y: 24}
+        - {x: 13, y: 28}
+    - name: AlienAttackBack_18
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 157
+        width: 48
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 30}
+        - {x: -24, y: 24}
+        - {x: -24, y: -29}
+        - {x: -22, y: -30}
+        - {x: 24, y: -30}
+        - {x: 24, y: 30}
+    - name: AlienAttackBack_19
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 157
+        width: 48
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11, y: 29.5}
+        - {x: -24, y: 21.5}
+        - {x: -24, y: -29.5}
+        - {x: 24, y: -29.5}
+        - {x: 24, y: 21.5}
+        - {x: 16, y: 29.5}
+    - name: AlienAttackBack_20
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 29
+        width: 48
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 30.5}
+        - {x: -24, y: 27.5}
+        - {x: -24, y: -30.5}
+        - {x: 24, y: -30.5}
+        - {x: 24, y: 29.5}
+        - {x: 22, y: 30.5}
+    - name: AlienAttackBack_21
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 29
+        width: 48
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24, y: 31.5}
+        - {x: -24, y: -31.5}
+        - {x: 24, y: -31.5}
+        - {x: 24, y: 27.5}
+        - {x: 11, y: 31.5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

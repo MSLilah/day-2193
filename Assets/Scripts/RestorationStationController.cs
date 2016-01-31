@@ -9,6 +9,7 @@ public class RestorationStationController : MonoBehaviour {
 
   public float resourceReductionRate;
   public float resourceRestorationRate;
+  public float damageFromEnemy;
 
   public float resourceTotal;
 
@@ -66,7 +67,7 @@ public class RestorationStationController : MonoBehaviour {
   }
 
   public void DamageResource() {
-    DecreaseResourceTotal(resourceReductionRate * Time.deltaTime);
+    DecreaseResourceTotal(damageFromEnemy);
     if (damageCooldown >= initDamageCooldown) {
       audio.PlayOneShot(damage, 0.7F);
       damageCooldown = 0f;
