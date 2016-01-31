@@ -85,6 +85,52 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &232826614
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 448346, guid: 49c16fd9a7f2e4104a3e8aee50734f87, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 433.17548
+      objectReference: {fileID: 0}
+    - target: {fileID: 448346, guid: 49c16fd9a7f2e4104a3e8aee50734f87, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 363.48343
+      objectReference: {fileID: 0}
+    - target: {fileID: 448346, guid: 49c16fd9a7f2e4104a3e8aee50734f87, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 448346, guid: 49c16fd9a7f2e4104a3e8aee50734f87, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 448346, guid: 49c16fd9a7f2e4104a3e8aee50734f87, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 448346, guid: 49c16fd9a7f2e4104a3e8aee50734f87, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 448346, guid: 49c16fd9a7f2e4104a3e8aee50734f87, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 448346, guid: 49c16fd9a7f2e4104a3e8aee50734f87, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11435218, guid: 49c16fd9a7f2e4104a3e8aee50734f87, type: 2}
+      propertyPath: playerSpeed
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 49c16fd9a7f2e4104a3e8aee50734f87, type: 2}
+  m_IsPrefabParent: 0
 --- !u!114 &760616769 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11447004, guid: f055a8ae9f165489183e9e7d81c0a26a,
