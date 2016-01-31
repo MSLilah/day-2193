@@ -3,7 +3,7 @@ using System.Collections;
 
 public class EnemyController : MonoBehaviour {
 
-  public float enemySpeed = 1f;
+  public float enemySpeed = 3f;
   public float enemyDamage = 5f;
   public float enemyHealth = 15f;
 
@@ -12,6 +12,8 @@ public class EnemyController : MonoBehaviour {
   private bool attackingTarget;
 
   private GameManager gm;
+  private Animator anim;
+  private SpriteRenderer sr;
 
   private AudioSource audio;
   public AudioClip death1;
@@ -29,9 +31,12 @@ public class EnemyController : MonoBehaviour {
     rb = gameObject.GetComponent<Rigidbody2D>();
     gm = GameObject.FindGameObjectWithTag(Tags.GAME_CONTROLLER).GetComponent<GameManager>();
     attackingTarget = false;
+    anim = gameObject.GetComponent<Animator>();
 
     audio = GetComponent<AudioSource>();
     roarCooldown = 3f;
+
+    sr = gameObject.GetComponent<SpriteRenderer>();
   }
 
   // Update is called once per frame
@@ -110,10 +115,28 @@ public class EnemyController : MonoBehaviour {
 
   void Move() {
     Vector2 direction = (target.transform.position - gameObject.transform.position).normalized;
-    if (DistanceToTarget() > 0.8f) {
+    if (!attackingTarget) {
       rb.velocity = direction * enemySpeed;
+      anim.SetBool("Walking", true);
+      if (Mathf.Abs(direction.y) > Mathf.Abs(direction.x)) {
+        if (direction.y > 0) {
+          anim.SetInteger("Direction", 3);
+        } else {
+          anim.SetInteger("Direction", 2);
+        }
+      } else {
+        if (direction.x > 0) {
+          anim.SetInteger("Direction", 0);
+          sr.flipX = false;
+        } else {
+          anim.SetInteger("Direction", 1);
+          sr.flipX = true;
+        }
+      }
     } else {
       rb.velocity = Vector2.zero;
+      anim.SetBool("Walking", false);
+      anim.SetInteger("Direction", -1);
     }
   }
 
