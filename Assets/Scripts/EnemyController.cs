@@ -87,8 +87,17 @@ public class EnemyController : MonoBehaviour {
   // Select a target for the Enemy to attack
   void SelectTarget() {
 
+    GameObject player = GameObject.FindGameObjectWithTag(Tags.PLAYER);
+
     // Figure out which room the enemy is currently in
     BoardManager.Locations enemyLocation = BoardManager.DetermineLocation(gameObject.transform.position);
+
+    // Ensure there is a 20% chance that an enemy in the same room as a player will attack them
+    if (Random.Range(0, 100) < 20 && enemyLocation == BoardManager.DetermineLocation(player.transform.position)) {
+      target = player;
+      return;
+    }
+
     // Head for the closest restoration station
     GameObject closestStation = null;
     float distanceToClosest = 5000f;
@@ -113,8 +122,6 @@ public class EnemyController : MonoBehaviour {
     } else {
       target = GameObject.FindGameObjectWithTag(Tags.PLAYER);
     }
-
-    print(target.name);
   }
 
   float DistanceToTarget() {
