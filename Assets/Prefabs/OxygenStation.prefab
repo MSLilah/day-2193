@@ -169,6 +169,19 @@ MonoBehaviour:
   damage: {fileID: 8300000, guid: 5fe07e59b109b4bcbb0229da0b1eaa90, type: 3}
   restoreCooldown: 4
   restore: {fileID: 8300000, guid: 2d54996a748f347f48df048ef93249a8, type: 3}
+  bar: {fileID: 128672}
+  barSprites:
+  - {fileID: 0}
+  - {fileID: 21300000, guid: 628e138f91d844990a8ea06694722261, type: 3}
+  - {fileID: 21300000, guid: 61c5f30dbc36d4dcb8e509b75ae2951e, type: 3}
+  - {fileID: 21300000, guid: 96c51c9ff1bac46d5b76bc5570616ddc, type: 3}
+  - {fileID: 21300000, guid: 6e08b12e87f5b41218e1aae5bc68b9c1, type: 3}
+  - {fileID: 21300000, guid: b6d5e1372e99746b6ba9eac125d0bbe2, type: 3}
+  - {fileID: 21300000, guid: b993e4dbaf8ac426189055485e5139ef, type: 3}
+  - {fileID: 21300000, guid: 997560fc25adc4b84a7b9e291a3719ee, type: 3}
+  - {fileID: 21300000, guid: 7cde811c044084cb9b10313c3af5be0d, type: 3}
+  - {fileID: 21300000, guid: 28ca80f42ab574bc68024c24d52f0516, type: 3}
+  - {fileID: 21300000, guid: ce66d8d2d69f8405a8a43797f0b316f7, type: 3}
 --- !u!212 &21256550
 SpriteRenderer:
   m_ObjectHideFlags: 1
