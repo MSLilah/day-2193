@@ -106,15 +106,15 @@ public class GameManager : MonoBehaviour {
         break;
       case BoardManager.Locations.Oxygen:
         Debug.Log("Oxygen");
-        minX = 15;
-        maxX = 29;
+        minX = 16;
+        maxX = 28;
         minY = 9;
         maxY = 20;
         break;
       case BoardManager.Locations.Items:
         Debug.Log("Items");
-        minX = -15;
-        maxX = -1;
+        minX = -14;
+        maxX = -2;
         minY = 9;
         maxY = 20;
         break;
