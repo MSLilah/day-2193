@@ -4,7 +4,7 @@ using System.Collections;
 
 public class RestorationStationController : MonoBehaviour {
 
-	public string name;
+  public string name;
   public string resourceName;
 
   public float resourceReductionRate;
