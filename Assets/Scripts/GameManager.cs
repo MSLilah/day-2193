@@ -42,10 +42,10 @@ public class GameManager : MonoBehaviour {
     boardManager.PlaceObj(resourceStation, new Vector3(-12f, 13f, 0f));
     boardManager.PlaceObj(healthStation, new Vector3(7.0f, 22f, 0f));
 
-    boardManager.PlaceObj(oxygenStationBrian, new Vector3(23f, 17f, 0f));
-    boardManager.PlaceObj(oxygenStationPreben, new Vector3(25f, 17f, 0f));
-    boardManager.PlaceObj(oxygenStationCory, new Vector3(25f, 14f, 0f));
-    boardManager.PlaceObj(oxygenStationJoseph, new Vector3(23f, 14f, 0f));
+    boardManager.PlaceObj(oxygenStationBrian, new Vector3(19f, 18f, 0f));
+    boardManager.PlaceObj(oxygenStationPreben, new Vector3(26f, 18f, 0f));
+    boardManager.PlaceObj(oxygenStationCory, new Vector3(26f, 9f, 0f));
+    boardManager.PlaceObj(oxygenStationJoseph, new Vector3(20f, 9f, 0f));
 
     timeLeft = 90f;
 
