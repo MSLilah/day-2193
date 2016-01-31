@@ -182,7 +182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemySpeed: 2
-  enemyDamage: 9
+  enemyDamage: 10
   enemyHealth: 15
   death1: {fileID: 8300000, guid: 8e25fc9b793c34fcba04379f687cb880, type: 3}
   death2: {fileID: 8300000, guid: e37fa1c3602b743b1ae77ae857d63284, type: 3}
@@ -242,7 +242,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: enemyDamage
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_GravityScale
