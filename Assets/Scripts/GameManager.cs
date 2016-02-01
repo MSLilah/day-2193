@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour {
 
   public GameObject wall;
   public GameObject floor;
+  public GameObject WallUpper;
+  public GameObject WallLower;
   public GameObject robot;
   public GameObject projectile;
 
@@ -57,7 +59,7 @@ public class GameManager : MonoBehaviour {
     player = GameObject.FindGameObjectWithTag(Tags.PLAYER);
     pc = player.GetComponent<PlayerController>();
 
-    boardManager.GenerateBoard(wall, floor);
+    boardManager.GenerateBoard(wall, floor, WallUpper, WallLower);
 
     enemySpawnCooldown = 0f;
 

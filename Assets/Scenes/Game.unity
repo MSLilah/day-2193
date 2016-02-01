@@ -214,6 +214,14 @@ Prefab:
       propertyPath: enemySpawnPot
       value: 
       objectReference: {fileID: 8300000, guid: 6cf176135d6fe4606bea56270fd097b5, type: 3}
+    - target: {fileID: 11493284, guid: 0965537aea45441808d66028dc17c6f6, type: 2}
+      propertyPath: WallLower
+      value: 
+      objectReference: {fileID: 159378, guid: 417e9bd4ee57b4578a5c4f4f9716e183, type: 2}
+    - target: {fileID: 11493284, guid: 0965537aea45441808d66028dc17c6f6, type: 2}
+      propertyPath: WallUpper
+      value: 
+      objectReference: {fileID: 133482, guid: 426b79ba66a87484abc18b8489a1f633, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0965537aea45441808d66028dc17c6f6, type: 2}
   m_IsPrefabParent: 0
