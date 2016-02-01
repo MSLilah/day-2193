@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour {
   public float playerSpeed;
   public float health;
   public float maxHealth;
-  public float invincibilityWindow = 1.0f;
+  public float invincibilityWindow = 1.5f;
 
   public GameObject projectile;
   private float fireDelay = 0f;
@@ -173,12 +173,10 @@ public class PlayerController : MonoBehaviour {
   public void Damage(float damage) {
     if (!invincible) {
       health -= damage;
+      audio.PlayOneShot(damageSound, 0.7F);
+      damageCooldown = 0f;
 
-      if (damageCooldown >= 3f) {
-        audio.PlayOneShot(damageSound, 0.7F);
-        damageCooldown = 0f;
-      }
-
+      anim.SetTrigger("Hurt");
       if (health <= 0) {
         gameManager.GameOver();
       } else {
