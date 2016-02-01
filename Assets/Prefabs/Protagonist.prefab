@@ -273,6 +273,8 @@ MonoBehaviour:
   fireSound: {fileID: 8300000, guid: a1e35546978f34d9a8cdede2347dc032, type: 3}
   damageSound: {fileID: 8300000, guid: 8205ac13db21249518af205078357b58, type: 3}
   damageCooldown: 2
+  stepSound: {fileID: 8300000, guid: c2c7791cc26184d229208363b492320c, type: 3}
+  stepCooldown: 1
 --- !u!124 &12426986
 Behaviour:
   m_ObjectHideFlags: 1
@@ -364,6 +366,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: damageCooldown
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: stepCooldown
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
