@@ -44,15 +44,15 @@ AnimationClip:
         inSlope: 0.25
         outSlope: 0.25
         tangentMode: 10
-      - time: 9
+      - time: 17
         value: 1
-        inSlope: -0.33333334
-        outSlope: -0.33333334
+        inSlope: -0.25
+        outSlope: -0.25
         tangentMode: 10
-      - time: 10.5
+      - time: 19
         value: 0
-        inSlope: -0.6666667
-        outSlope: -0.6666667
+        inSlope: -0.5
+        outSlope: -0.5
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -66,10 +66,10 @@ AnimationClip:
       m_Curve:
       - time: 0
         value: 566
-        inSlope: -11.636364
-        outSlope: -11.636364
+        inSlope: -12.8
+        outSlope: -12.8
         tangentMode: 10
-      - time: 5.5
+      - time: 5
         value: 502
         inSlope: Infinity
         outSlope: -11.636364
@@ -89,7 +89,7 @@ AnimationClip:
         inSlope: 0
         outSlope: 0
         tangentMode: 0
-      - time: 5.5
+      - time: 5
         value: 387
         inSlope: Infinity
         outSlope: 19.818182
@@ -105,7 +105,7 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: 2800000, guid: b5c25d534aad14fa69f8a4829376ccb0, type: 3}
-    - time: 5.5
+    - time: 5
       value: {fileID: 2800000, guid: 53fa5b77f08c8416bbea4c248d3cf555, type: 3}
     attribute: m_Texture
     path: 
@@ -150,7 +150,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 10.583333
+    m_StopTime: 19.066668
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -194,15 +194,15 @@ AnimationClip:
         inSlope: 0.25
         outSlope: 0.25
         tangentMode: 10
-      - time: 9
+      - time: 17
         value: 1
-        inSlope: -0.33333334
-        outSlope: -0.33333334
+        inSlope: -0.25
+        outSlope: -0.25
         tangentMode: 10
-      - time: 10.5
+      - time: 19
         value: 0
-        inSlope: -0.6666667
-        outSlope: -0.6666667
+        inSlope: -0.5
+        outSlope: -0.5
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -216,10 +216,10 @@ AnimationClip:
       m_Curve:
       - time: 0
         value: 566
-        inSlope: -11.636364
-        outSlope: -11.636364
+        inSlope: -12.8
+        outSlope: -12.8
         tangentMode: 10
-      - time: 5.5
+      - time: 5
         value: 502
         inSlope: Infinity
         outSlope: -11.636364
@@ -239,7 +239,7 @@ AnimationClip:
         inSlope: 0
         outSlope: 0
         tangentMode: 0
-      - time: 5.5
+      - time: 5
         value: 387
         inSlope: Infinity
         outSlope: 19.818182
@@ -256,7 +256,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_GenerateMotionCurves: 0
   m_Events:
-  - time: 10.583333
+  - time: 19.066668
     functionName: StartGame
     data: 
     objectReferenceParameter: {fileID: 0}
