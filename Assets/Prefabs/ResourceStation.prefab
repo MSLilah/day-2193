@@ -160,7 +160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: ResourceStation
-  resourceName: Food
+  resourceName: Plant Life
   resourceReductionRate: 0.5
   resourceRestorationRate: 2
   damageFromEnemy: 1
@@ -258,7 +258,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: resourceName
-      value: Food
+      value: Plant Life
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: resourceReductionRate
