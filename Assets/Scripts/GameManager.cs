@@ -150,35 +150,35 @@ public class GameManager : MonoBehaviour {
         minX = 1;
         maxX = 13;
         minY = 1;
-        maxY = 13;
+        maxY = 12;
         break;
       case BoardManager.Locations.Oxygen:
         Debug.Log("Oxygen");
         minX = 16;
         maxX = 28;
         minY = 9;
-        maxY = 20;
+        maxY = 19;
         break;
       case BoardManager.Locations.Items:
         Debug.Log("Items");
         minX = -14;
         maxX = -2;
         minY = 9;
-        maxY = 20;
+        maxY = 19;
         break;
       case BoardManager.Locations.Health:
         Debug.Log("Health");
         minX = 0;
         maxX = 14;
         minY = 15;
-        maxY = 29;
+        maxY = 28;
         break;
       default:
         // in case of a default, just go to the cockpit
         minX = 1;
         maxX = 13;
         minY = 1;
-        maxY = 13;
+        maxY = 12;
         break;
     }
 
