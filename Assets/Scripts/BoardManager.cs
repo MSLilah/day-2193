@@ -8,6 +8,8 @@ public class BoardManager : MonoBehaviour {
 
   private GameObject wall;
   private GameObject floor;
+  private GameObject WallUpper;
+  private GameObject WallLower;
 
   public enum Locations {Cockpit, Oxygen, Items, Health, Unknown};
 
@@ -51,8 +53,11 @@ public class BoardManager : MonoBehaviour {
 
         if (doors.Contains(vec)) {
           instObj = floor;
-        }
-        else if (i == 0 || j == 0 || i == columns-1 || j == rows-1) {
+        } else if (j == rows-1 && i != 0 && i != columns-1) {
+          instObj = WallUpper;
+        } else if (j == rows-2 && i != 0 && i != columns-1) {
+          instObj = WallLower;
+        } else if (i == 0 || j == 0 || i == columns-1 || j == rows-1) {
           instObj = wall;
           //Debug.Log("Wall: " + i + ", " + j);
         } else {
@@ -67,10 +72,13 @@ public class BoardManager : MonoBehaviour {
     }
   }
 
-  public void GenerateBoard(GameObject w, GameObject f) {
+
+  public void GenerateBoard(GameObject w, GameObject f, GameObject wu, GameObject wl) {
     boardTransform = new GameObject("Board").transform;
     wall = w;
     floor = f;
+    WallUpper = wu;
+    WallLower = wl;
 
     List<Vector2> doors = new List<Vector2>();
 
@@ -80,6 +88,8 @@ public class BoardManager : MonoBehaviour {
 
     doors.Add(new Vector2(7f, 14f)); // To Health
     doors.Add(new Vector2(8f, 14f));
+    doors.Add(new Vector2(7f, 13f));
+    doors.Add(new Vector2(8f, 13f));
 
     doors.Add(new Vector2(14f, 9f)); // To Oxygen
     doors.Add(new Vector2(14f, 10f));
