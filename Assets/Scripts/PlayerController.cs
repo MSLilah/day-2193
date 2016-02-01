@@ -37,6 +37,10 @@ public class PlayerController : MonoBehaviour {
   public float damageCooldown;
   private float initDamageCooldown;
 
+  public AudioClip stepSound;
+  public float stepCooldown;
+  private float initStepCooldown;
+
   // Use this for initialization
   void Start () {
     playerDirection = new Vector2(0f, 2f);
@@ -54,6 +58,7 @@ public class PlayerController : MonoBehaviour {
     initRestoreCooldown = restoreCooldown;
     initFireCooldown = fireCooldown;
     initDamageCooldown = damageCooldown;
+    initStepCooldown = stepCooldown;
   }
 
   public Vector2 getPlayerDirection() {
@@ -101,8 +106,11 @@ public class PlayerController : MonoBehaviour {
     }
 
     if (damageCooldown <= initDamageCooldown) {
-      Debug.Log("increase damage cooldown");
       damageCooldown += Time.deltaTime;
+    }
+
+    if (stepCooldown <= initStepCooldown) {
+      stepCooldown += Time.deltaTime;
     }
 
     Move();
@@ -144,6 +152,11 @@ public class PlayerController : MonoBehaviour {
     } else {
       anim.SetBool("Walking", false);
     }
+
+    if (stepCooldown >= initStepCooldown && (xVel != 0 || yVel != 0)) {
+      audio.PlayOneShot(stepSound, 0.7F);
+      stepCooldown = 0f;
+    }
   }
 
   void InteractWithStation() {
@@ -161,9 +174,7 @@ public class PlayerController : MonoBehaviour {
     if (!invincible) {
       health -= damage;
 
-      Debug.Log(damageCooldown);
       if (damageCooldown >= 3f) {
-        Debug.Log("play damage sound");
         audio.PlayOneShot(damageSound, 0.7F);
         damageCooldown = 0f;
       }
